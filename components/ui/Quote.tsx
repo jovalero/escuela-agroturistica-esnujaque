@@ -17,23 +17,25 @@ export function Quote({ quote, author, context, className, variant = 'light' }: 
     ? 'border-l-4 border-amber-400 bg-[#143326] text-white border border-emerald-700/60 shadow-sm'
     : isWhite
     ? 'border-l-4 border-amber-500 bg-white text-stone-950 border border-stone-200/90 shadow-xl'
-    : 'border-l-4 border-amber-500 bg-amber-50/70 text-stone-950 border border-stone-200/80 shadow-xs';
+    : 'border-l-4 border-amber-500 bg-amber-50/70 text-stone-950 border border-stone-200/80 shadow-xs dark:bg-[#13261D] dark:text-white dark:border-emerald-800/70 dark:border-l-amber-400';
 
   const quoteStyles = isDark
     ? 'text-white'
-    : 'text-black';
+    : isWhite
+    ? 'text-black'
+    : 'text-black dark:text-white';
 
   const figcaptionStyles = isDark
     ? 'text-amber-300'
     : isWhite
     ? 'text-stone-950'
-    : 'text-amber-950';
+    : 'text-amber-950 dark:text-amber-300';
 
   const contextStyles = isDark
     ? 'text-emerald-200'
     : isWhite
     ? 'text-stone-600'
-    : 'text-stone-800';
+    : 'text-stone-800 dark:text-emerald-200';
 
   return (
     <figure

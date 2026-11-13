@@ -15,7 +15,12 @@
   }
 
   html.dark {
-    background-color: #0e1713;
+    background-color: #0b1611;
+    color: #f3f4f6;
+  }
+
+  html.dark body {
+    background-color: #0b1611;
     color: #f3f4f6;
   }
 

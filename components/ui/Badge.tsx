@@ -9,15 +9,15 @@ interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
 
 const badgeStyles: Record<BadgeVariant, string> = {
   paramo:
-    'bg-emerald-50 text-emerald-950 border-emerald-300 font-bold',
+    'bg-emerald-50 text-emerald-950 border-emerald-300 dark:bg-emerald-950/90 dark:text-amber-300 dark:border-emerald-700/70 font-bold',
   tierra:
-    'bg-amber-100 text-amber-950 border-amber-400 font-bold',
+    'bg-amber-100 text-amber-950 border-amber-400 dark:bg-amber-950/90 dark:text-amber-300 dark:border-amber-700/70 font-bold',
   laguna:
-    'bg-sky-50 text-sky-950 border-sky-300 font-bold',
+    'bg-sky-50 text-sky-950 border-sky-300 dark:bg-sky-950/90 dark:text-sky-200 dark:border-sky-700/70 font-bold',
   warning:
-    'bg-amber-200 text-amber-950 border-amber-400 font-bold',
+    'bg-amber-200 text-amber-950 border-amber-400 dark:bg-amber-900/80 dark:text-amber-200 dark:border-amber-600 font-bold',
   neutral:
-    'bg-stone-100 text-stone-950 border-stone-300 font-bold',
+    'bg-stone-100 text-stone-950 border-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:border-stone-700 font-bold',
 };
 
 export function Badge({ variant = 'paramo', className, children, ...props }: BadgeProps) {

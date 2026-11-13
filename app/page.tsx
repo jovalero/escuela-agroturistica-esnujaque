@@ -30,15 +30,15 @@ const PILLAR_ICONS = {
 export default function HomePage() {
   return (
     <>
-      {/* 1. HERO (Blanco hueso / claro, sobrio, humano y centrado en la comunidad) */}
-      <section className="relative overflow-hidden bg-[#FAF8F5] text-stone-900 pt-8 pb-14 sm:py-20 border-b border-stone-200/80">
+      {/* 1. HERO (Blanco hueso / claro en modo día, Noche andina en modo oscuro) */}
+      <section className="relative overflow-hidden bg-[#FAF8F5] dark:bg-[#0B1611] text-stone-900 dark:text-white pt-8 pb-14 sm:py-20 border-b border-stone-200/80 dark:border-emerald-900/60 transition-colors duration-200">
         <Container className="relative z-10">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             {/* Texto principal del Hero */}
             <div className="lg:col-span-6 space-y-6">
               {/* Emblema oficial y etiqueta del anteproyecto */}
               <div className="flex items-center gap-3">
-                <div className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-emerald-800/20 bg-white p-0.5 shadow-sm">
+                <div className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-emerald-800/20 dark:border-amber-300/60 bg-white dark:bg-[#FAF8F5] p-0.5 shadow-sm">
                   <Image
                     src={siteConfig.logo.emblem}
                     alt={siteConfig.logo.alt}
@@ -49,19 +49,19 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="inline-flex">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-emerald-600/30 bg-emerald-50 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-emerald-950">
-                    <span className="h-2 w-2 rounded-full bg-emerald-600" aria-hidden="true" />
+                  <span className="inline-flex items-center gap-2 rounded-full border border-emerald-600/30 dark:border-emerald-500/40 bg-emerald-50 dark:bg-emerald-950/90 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-emerald-950 dark:text-amber-300">
+                    <span className="h-2 w-2 rounded-full bg-emerald-600 dark:bg-amber-400" aria-hidden="true" />
                     Anteproyecto 2026 · En consulta comunitaria
                   </span>
                 </div>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-[2.85rem] font-bold leading-tight tracking-tight text-stone-900">
+              <h1 className="font-serif text-3xl sm:text-4xl lg:text-[2.85rem] font-bold leading-tight tracking-tight text-stone-900 dark:text-white">
                 {siteConfig.name}
               </h1>
 
               {/* Un solo texto, corto, directo y natural */}
-              <p className="text-base sm:text-lg text-stone-700 leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg text-stone-700 dark:text-emerald-100 leading-relaxed max-w-xl">
                 Una escuela técnica para que los jóvenes de La Mesa de Esnujaque puedan formarse en agricultura, turismo y cuidado del ambiente sin tener que irse del pueblo. Es un anteproyecto y queremos construirlo con la comunidad.
               </p>
 
@@ -70,7 +70,7 @@ export default function HomePage() {
                 <Button
                   href="/documento"
                   size="lg"
-                  className="bg-emerald-800 hover:bg-emerald-900 text-white font-bold shadow-xs border border-emerald-900"
+                  className="bg-emerald-800 hover:bg-emerald-900 dark:bg-emerald-700 dark:hover:bg-emerald-600 text-white font-bold shadow-xs border border-emerald-900 dark:border-emerald-600"
                 >
                   <BookOpen className="h-5 w-5" aria-hidden="true" />
                   <span>Leer el anteproyecto</span>
@@ -79,7 +79,7 @@ export default function HomePage() {
                   href="/participa"
                   size="lg"
                   variant="outline"
-                  className="border-amber-500 bg-amber-400 text-stone-950 hover:bg-amber-300 font-bold shadow-xs"
+                  className="border-amber-500 bg-amber-400 text-stone-950 hover:bg-amber-300 dark:border-amber-400 dark:bg-amber-400 dark:text-stone-950 dark:hover:bg-amber-300 font-bold shadow-xs"
                 >
                   <HeartHandshake className="h-5 w-5 text-stone-950" aria-hidden="true" />
                   <span>Participá</span>
@@ -87,17 +87,17 @@ export default function HomePage() {
               </div>
 
               {/* Datos breves de contexto */}
-              <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-stone-600 border-t border-stone-200">
+              <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-stone-600 dark:text-emerald-200 border-t border-stone-200 dark:border-emerald-900/70">
                 <span>
-                  <strong className="text-stone-900 font-bold">Autor:</strong> {siteConfig.author.name}
+                  <strong className="text-stone-900 dark:text-white font-bold">Autor:</strong> {siteConfig.author.name}
                 </span>
                 <span>
-                  <strong className="text-stone-900 font-bold">Estructura:</strong> 21 capítulos íntegros
+                  <strong className="text-stone-900 dark:text-white font-bold">Estructura:</strong> 21 capítulos íntegros
                 </span>
                 <a
                   href={siteConfig.pdfUrl}
                   download="Anteproyecto-Escuela-Tecnica-Agroturistica-La-Mesa-de-Esnujaque.pdf"
-                  className="inline-flex items-center gap-1 font-semibold text-emerald-800 underline hover:text-emerald-900"
+                  className="inline-flex items-center gap-1 font-semibold text-emerald-800 dark:text-amber-300 underline hover:text-emerald-900 dark:hover:text-amber-200"
                 >
                   <Download className="h-3.5 w-3.5" aria-hidden="true" />
                   Descargar PDF completo
@@ -115,7 +115,7 @@ export default function HomePage() {
                 aspectRatio="landscape"
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="border-stone-300/80 shadow-2xl"
+                className="border-stone-300/80 dark:border-emerald-800/70 shadow-2xl"
               />
             </div>
           </div>
@@ -123,15 +123,15 @@ export default function HomePage() {
       </section>
 
       {/* Franja destacada única de aviso legal comunitario */}
-      <div className="border-b border-stone-200/80 bg-white py-3 px-4 text-xs sm:text-sm text-stone-700 print:hidden">
+      <div className="border-b border-stone-200/80 dark:border-emerald-900/60 bg-white dark:bg-[#0E1C15] py-3 px-4 text-xs sm:text-sm text-stone-700 dark:text-emerald-100 print:hidden transition-colors duration-200">
         <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
-          <p className="leading-relaxed text-stone-700">
-            <strong className="text-emerald-900 font-semibold">Aviso comunitario: </strong>
-            <span className="text-stone-700">{siteConfig.legalDisclaimer}</span>
+          <p className="leading-relaxed text-stone-700 dark:text-emerald-100">
+            <strong className="text-emerald-900 dark:text-amber-300 font-semibold">Aviso comunitario: </strong>
+            <span className="text-stone-700 dark:text-emerald-100">{siteConfig.legalDisclaimer}</span>
           </p>
           <Link
             href="/documento"
-            className="text-xs font-bold text-emerald-800 underline hover:text-emerald-950 shrink-0"
+            className="text-xs font-bold text-emerald-800 dark:text-amber-300 underline hover:text-emerald-950 dark:hover:text-amber-200 shrink-0"
           >
             Conocer antecedentes legales
           </Link>
@@ -195,28 +195,28 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* 3. POR QUÉ LA MESA DE ESNUJAQUE (Blanco) */}
+      {/* 3. POR QUÉ LA MESA DE ESNUJAQUE (Blanco en modo claro / Noche andina en modo oscuro) */}
       <Section id="por-que-esnujaque" variant="default" className="py-12 sm:py-16">
         <Container>
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             <div className="lg:col-span-7 space-y-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
+              <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-amber-300">
                 El territorio como escuela viva
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-stone-900">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-stone-900 dark:text-white">
                 Por qué La Mesa de Esnujaque
               </h2>
-              <p className="text-base leading-relaxed text-stone-700">
+              <p className="text-base leading-relaxed text-stone-700 dark:text-emerald-100">
                 La Mesa tiene todo para una escuela técnica: tierra fértil, tradición agrícola familiar y un entorno andino único. Entre el Santuario de Durí, la Laguna de la Estrella y la Laguna de Pozo Negro, el pueblo reúne historia, agua y campo que los estudiantes pueden aprender a cuidar y trabajar.
               </p>
 
-              <div className="space-y-3 pt-1 text-sm text-stone-800">
+              <div className="space-y-3 pt-1 text-sm text-stone-800 dark:text-emerald-50">
                 <div className="flex items-start gap-3">
                   <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-800 text-amber-300 font-bold text-xs mt-0.5">
                     ✓
                   </div>
                   <div>
-                    <strong className="text-stone-950 font-bold">Santuario de Durí:</strong> Referente histórico, arquitectónico y espiritual del pueblo.
+                    <strong className="text-stone-950 dark:text-white font-bold">Santuario de Durí:</strong> Referente histórico, arquitectónico y espiritual del pueblo.
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -224,7 +224,7 @@ export default function HomePage() {
                     ✓
                   </div>
                   <div>
-                    <strong className="text-stone-950 font-bold">Laguna de la Estrella y Laguna de Pozo Negro:</strong> Reservorios naturales de agua en la alta montaña que requieren cuidado y estudio.
+                    <strong className="text-stone-950 dark:text-white font-bold">Laguna de la Estrella y Laguna de Pozo Negro:</strong> Reservorios naturales de agua en la alta montaña que requieren cuidado y estudio.
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -232,7 +232,7 @@ export default function HomePage() {
                     ✓
                   </div>
                   <div>
-                    <strong className="text-stone-950 font-bold">Valles y familias agrícolas:</strong> Décadas de conocimiento en el cultivo de hortalizas y flores en terrazas andinas.
+                    <strong className="text-stone-950 dark:text-white font-bold">Valles y familias agrícolas:</strong> Décadas de conocimiento en el cultivo de hortalizas y flores en terrazas andinas.
                   </div>
                 </div>
               </div>
@@ -241,7 +241,7 @@ export default function HomePage() {
                 <Button
                   href="/territorio"
                   variant="primary"
-                  className="bg-emerald-800 hover:bg-emerald-900 text-white font-bold border-0 shadow-sm"
+                  className="bg-emerald-800 hover:bg-emerald-900 dark:bg-amber-400 dark:hover:bg-amber-300 dark:text-stone-950 text-white font-bold border-0 shadow-sm"
                 >
                   <span>Explorar territorio, galería y mapa</span>
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -251,10 +251,10 @@ export default function HomePage() {
 
             {/* Ficha editorial territorial del pueblo con emblema */}
             <div className="lg:col-span-5">
-              <div className="rounded-2xl border border-stone-200 bg-[#FAF8F5] p-6 text-stone-900 space-y-4 shadow-sm">
-                <div className="flex items-center justify-between border-b border-stone-200 pb-3">
+              <div className="rounded-2xl border border-stone-200 dark:border-emerald-800/70 bg-[#FAF8F5] dark:bg-[#13261D] p-6 text-stone-900 dark:text-white space-y-4 shadow-sm transition-colors duration-200">
+                <div className="flex items-center justify-between border-b border-stone-200 dark:border-emerald-800/80 pb-3">
                   <div className="flex items-center gap-2.5">
-                    <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border border-emerald-800/30 bg-white p-0.5">
+                    <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border border-emerald-800/30 dark:border-amber-300/60 bg-white dark:bg-[#FAF8F5] p-0.5">
                       <Image
                         src={siteConfig.logo.emblem}
                         alt={siteConfig.logo.alt}
@@ -263,26 +263,26 @@ export default function HomePage() {
                         className="h-full w-full object-contain"
                       />
                     </div>
-                    <span className="font-serif text-lg font-bold text-stone-900">Datos del Territorio</span>
+                    <span className="font-serif text-lg font-bold text-stone-900 dark:text-white">Datos del Territorio</span>
                   </div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-800">Emblema Local</span>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-800 dark:text-amber-300">Emblema Local</span>
                 </div>
                 <dl className="space-y-3 text-xs sm:text-sm">
                   <div>
-                    <dt className="text-emerald-800 font-semibold">Ubicación</dt>
-                    <dd className="font-bold text-stone-950">Municipio Urdaneta, Estado Trujillo, Venezuela</dd>
+                    <dt className="text-emerald-800 dark:text-amber-300 font-semibold">Ubicación</dt>
+                    <dd className="font-bold text-stone-950 dark:text-white">Municipio Urdaneta, Estado Trujillo, Venezuela</dd>
                   </div>
                   <div>
-                    <dt className="text-emerald-800 font-semibold">Altitud y Clima</dt>
-                    <dd className="font-bold text-stone-950">Aproximadamente 1.750 msnm · Clima templado de montaña</dd>
+                    <dt className="text-emerald-800 dark:text-amber-300 font-semibold">Altitud y Clima</dt>
+                    <dd className="font-bold text-stone-950 dark:text-white">Aproximadamente 1.750 msnm · Clima templado de montaña</dd>
                   </div>
                   <div>
-                    <dt className="text-emerald-800 font-semibold">Vocación Principal</dt>
-                    <dd className="font-bold text-stone-950">Agricultura familiar de altura, floricultura, turismo rural y protección de cuencas</dd>
+                    <dt className="text-emerald-800 dark:text-amber-300 font-semibold">Vocación Principal</dt>
+                    <dd className="font-bold text-stone-950 dark:text-white">Agricultura familiar de altura, floricultura, turismo rural y protección de cuencas</dd>
                   </div>
                   <div>
-                    <dt className="text-emerald-800 font-semibold">Enfoque Educativo</dt>
-                    <dd className="font-bold text-stone-950">Articular la escuela técnica con la vida cotidiana y productiva del pueblo</dd>
+                    <dt className="text-emerald-800 dark:text-amber-300 font-semibold">Enfoque Educativo</dt>
+                    <dd className="font-bold text-stone-950 dark:text-white">Articular la escuela técnica con la vida cotidiana y productiva del pueblo</dd>
                   </div>
                 </dl>
               </div>
@@ -345,17 +345,17 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* 5. IMPACTOS ESPERADOS (Blanco) */}
+      {/* 5. IMPACTOS ESPERADOS (Blanco en modo claro / Noche andina en modo oscuro) */}
       <Section id="impactos-esperados" variant="default" className="py-12 sm:py-16">
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-amber-300">
               Bienestar para la gente
             </span>
-            <h2 className="mt-2 font-serif text-3xl sm:text-4xl font-bold text-stone-900">
+            <h2 className="mt-2 font-serif text-3xl sm:text-4xl font-bold text-stone-900 dark:text-white">
               Impactos esperados en la comunidad
             </h2>
-            <p className="mt-2 text-base text-stone-700 leading-relaxed">
+            <p className="mt-2 text-base text-stone-700 dark:text-emerald-100 leading-relaxed">
               Lo que el anteproyecto busca lograr para las familias, los jóvenes y los productores de La Mesa de Esnujaque:
             </p>
           </div>
@@ -364,15 +364,15 @@ export default function HomePage() {
             {siteConfig.impacts.map((impact) => (
               <div
                 key={impact.id}
-                className="rounded-xl border border-stone-200 bg-[#FAF8F5] p-5 text-stone-900 shadow-xs transition-colors hover:border-emerald-600/50"
+                className="rounded-xl border border-stone-200 dark:border-emerald-800/70 bg-[#FAF8F5] dark:bg-[#13261D] p-5 text-stone-900 dark:text-white shadow-xs transition-colors hover:border-emerald-600/50 dark:hover:border-amber-400/50"
               >
-                <span className="inline-block rounded-md bg-emerald-100 px-2.5 py-1 text-xs font-bold text-emerald-900 mb-2">
+                <span className="inline-block rounded-md bg-emerald-100 dark:bg-emerald-900/90 px-2.5 py-1 text-xs font-bold text-emerald-900 dark:text-amber-300 mb-2">
                   {impact.badge}
                 </span>
-                <h3 className="font-serif text-lg font-bold text-stone-900">
+                <h3 className="font-serif text-lg font-bold text-stone-900 dark:text-white">
                   {impact.title}
                 </h3>
-                <p className="mt-2 text-sm text-stone-700 leading-relaxed">
+                <p className="mt-2 text-sm text-stone-700 dark:text-emerald-100 leading-relaxed">
                   {impact.summary}
                 </p>
               </div>
@@ -437,17 +437,17 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* 7. ALINEACIÓN CON LA AGENDA 2030 (Blanco) */}
+      {/* 7. ALINEACIÓN CON LA AGENDA 2030 (Blanco en modo claro / Noche andina en modo oscuro) */}
       <Section id="agenda-2030" variant="default" className="py-12 sm:py-14">
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-8">
-            <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-amber-300">
               Marco internacional
             </span>
-            <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-stone-900">
+            <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-stone-900 dark:text-white">
               Alineación con los Objetivos de Desarrollo Sostenible
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-stone-700">
+            <p className="mt-2 text-xs sm:text-sm text-stone-700 dark:text-emerald-100">
               El anteproyecto vincula sus metas con cinco objetivos globales de la ONU:
             </p>
           </div>
@@ -457,7 +457,7 @@ export default function HomePage() {
             {siteConfig.sdgs.map((sdg) => (
               <div
                 key={sdg.number}
-                className="rounded-xl border border-stone-200 bg-[#FAF8F5] p-4 text-stone-900 shadow-xs transition-colors hover:border-emerald-600/50"
+                className="rounded-xl border border-stone-200 dark:border-emerald-800/70 bg-[#FAF8F5] dark:bg-[#13261D] p-4 text-stone-900 dark:text-white shadow-xs transition-colors hover:border-emerald-600/50 dark:hover:border-amber-400/50"
               >
                 <span
                   className="inline-block rounded px-2 py-0.5 text-[11px] font-extrabold text-white mb-2"
@@ -465,10 +465,10 @@ export default function HomePage() {
                 >
                   {sdg.number}
                 </span>
-                <h3 className="font-serif text-sm font-bold text-stone-900">
+                <h3 className="font-serif text-sm font-bold text-stone-900 dark:text-white">
                   {sdg.title}
                 </h3>
-                <p className="mt-1.5 text-xs text-stone-700 leading-relaxed">
+                <p className="mt-1.5 text-xs text-stone-700 dark:text-emerald-100 leading-relaxed">
                   {sdg.description}
                 </p>
               </div>

@@ -8,6 +8,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ChevronDown, Download, Menu, X } from 'lucide-react';
 import { siteConfig } from '@/data/site';
 import { cn } from '@/lib/utils';
+import { ThemeToggle } from './ThemeToggle';
 
 export function Header() {
   const pathname = usePathname();
@@ -259,11 +260,13 @@ export function Header() {
             </div>
           </nav>
 
-          {/* Derecha: Botón destacado "Participá" y botón de menú móvil */}
-          <div className="flex items-center gap-2.5">
+          {/* Derecha: Selector de modo claro/oscuro (Sol y Luna), botón "Participá" y menú móvil */}
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            <ThemeToggle />
+
             <Link
               href="/participa"
-              className="inline-flex items-center justify-center rounded-xl bg-amber-400 px-4 py-2 text-xs sm:text-sm font-bold text-stone-950 shadow-xs transition-colors hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
+              className="inline-flex items-center justify-center rounded-xl bg-amber-400 px-3.5 sm:px-4 py-2 text-xs sm:text-sm font-bold text-stone-950 shadow-xs transition-colors hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
             >
               Participá
             </Link>

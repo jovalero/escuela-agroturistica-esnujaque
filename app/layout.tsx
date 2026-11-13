@@ -97,7 +97,12 @@ export default function RootLayout({
       className={`${lora.variable} ${plusJakarta.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col font-sans bg-white dark:bg-papel-dark text-stone-900 dark:text-stone-100 antialiased">
+      <body className="min-h-screen flex flex-col font-sans bg-white dark:bg-[#0B1611] text-stone-900 dark:text-stone-100 antialiased transition-colors duration-200">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(localStorage.getItem('eta-theme')==='dark'){document.documentElement.classList.add('dark');}}catch(e){}`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(baseJsonLd) }}
