@@ -97,40 +97,26 @@ export function Header() {
       <header
         className={cn(
           'sticky top-0 z-40 w-full transition-all duration-200 print:hidden',
-          isTransparentHero
-            ? 'bg-paramo-950/65 backdrop-blur-xs border-b border-white/15 text-white'
-            : 'bg-papel/95 dark:bg-papel-dark/95 backdrop-blur-md border-b border-stone-200/80 dark:border-paramo-800/80 shadow-sm text-stone-900 dark:text-stone-100'
+          'bg-black/95 text-white backdrop-blur-md border-b border-neutral-800/90 shadow-sm'
         )}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
           {/* Izquierda: Logo / Nombre del proyecto */}
           <Link
             href="/"
-            className="group flex items-center gap-2.5 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-paramo-500"
+            className="group flex items-center gap-2.5 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
           >
             <span
-              className={cn(
-                'flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border transition-colors',
-                isTransparentHero
-                  ? 'bg-paramo-700/90 border-paramo-400/50 text-white'
-                  : 'bg-paramo-700 border-paramo-600 text-white'
-              )}
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-paramo-500/50 bg-paramo-700 text-white transition-colors group-hover:bg-paramo-600"
               aria-hidden="true"
             >
               <Sprout className="h-5 w-5" />
             </span>
             <div className="flex flex-col">
-              <span className="font-serif text-sm sm:text-base font-bold leading-tight tracking-tight">
+              <span className="font-serif text-sm sm:text-base font-bold leading-tight tracking-tight text-white">
                 Escuela Técnica Agroturística
               </span>
-              <span
-                className={cn(
-                  'text-[11px] font-medium',
-                  isTransparentHero
-                    ? 'text-paramo-100'
-                    : 'text-stone-600 dark:text-stone-400'
-                )}
-              >
+              <span className="text-[11px] font-medium text-neutral-300">
                 La Mesa de Esnujaque · Trujillo
               </span>
             </div>
@@ -149,14 +135,10 @@ export function Header() {
                   href={item.href}
                   aria-current={active ? 'page' : undefined}
                   className={cn(
-                    'rounded-lg px-2.5 py-1.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-paramo-500',
+                    'rounded-lg px-2.5 py-1.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300',
                     active
-                      ? isTransparentHero
-                        ? 'bg-white/20 text-white font-semibold'
-                        : 'bg-paramo-100 text-paramo-900 dark:bg-paramo-800 dark:text-paramo-100 font-semibold'
-                      : isTransparentHero
-                        ? 'text-paramo-50 hover:bg-white/10 hover:text-white'
-                        : 'text-stone-700 hover:bg-stone-100 hover:text-paramo-900 dark:text-stone-300 dark:hover:bg-paramo-900/60 dark:hover:text-white'
+                      ? 'bg-white/20 text-white font-semibold'
+                      : 'text-neutral-200 hover:bg-white/10 hover:text-white'
                   )}
                 >
                   {item.label}
@@ -168,22 +150,13 @@ export function Header() {
           {/* Derecha: Acciones y menú móvil */}
           <div className="flex items-center gap-2">
             <ThemeToggle
-              className={
-                isTransparentHero
-                  ? 'border-white/25 text-white hover:bg-white/10'
-                  : 'border-stone-300 dark:border-paramo-700 text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-paramo-800'
-              }
+              className="border-neutral-800 text-neutral-200 hover:bg-white/10 hover:text-white"
             />
 
             <a
               href={siteConfig.pdfUrl}
               download="Anteproyecto-Escuela-Tecnica-Agroturistica-La-Mesa-de-Esnujaque.pdf"
-              className={cn(
-                'hidden sm:inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-2 text-xs sm:text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-paramo-500',
-                isTransparentHero
-                  ? 'border-white/35 bg-white/10 text-white hover:bg-white/20'
-                  : 'border-paramo-700 text-paramo-800 hover:bg-paramo-50 dark:border-paramo-400 dark:text-paramo-200 dark:hover:bg-paramo-900/60'
-              )}
+              className="hidden sm:inline-flex items-center gap-1.5 rounded-xl border border-neutral-700 bg-neutral-900/80 px-3.5 py-2 text-xs sm:text-sm font-semibold text-white transition-colors hover:bg-neutral-800 hover:border-neutral-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
             >
               <Download className="h-4 w-4" aria-hidden="true" />
               <span>Descargar PDF</span>
@@ -191,12 +164,7 @@ export function Header() {
 
             <Link
               href="/participa"
-              className={cn(
-                'hidden sm:inline-flex items-center justify-center rounded-xl px-4 py-2 text-xs sm:text-sm font-bold shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300',
-                isTransparentHero
-                  ? 'bg-amber-400 text-stone-950 hover:bg-amber-300'
-                  : 'bg-paramo-700 text-white hover:bg-paramo-800 dark:bg-paramo-500 dark:text-paramo-950 dark:hover:bg-paramo-400'
-              )}
+              className="hidden sm:inline-flex items-center justify-center rounded-xl bg-amber-400 px-4 py-2 text-xs sm:text-sm font-bold text-stone-950 shadow-sm transition-colors hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
             >
               Participá
             </Link>
@@ -208,12 +176,7 @@ export function Header() {
               aria-controls="mobile-navigation-drawer"
               aria-label={mobileMenuOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'}
               onClick={() => setMobileMenuOpen((prev) => !prev)}
-              className={cn(
-                'inline-flex xl:hidden h-10 w-10 items-center justify-center rounded-xl border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-paramo-500',
-                isTransparentHero
-                  ? 'border-white/30 bg-white/10 text-white hover:bg-white/20'
-                  : 'border-stone-300 dark:border-paramo-700 text-stone-800 dark:text-stone-100 hover:bg-stone-100 dark:hover:bg-paramo-800'
-              )}
+              className="inline-flex xl:hidden h-10 w-10 items-center justify-center rounded-xl border border-neutral-700 bg-neutral-900 text-white transition-colors hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
             >
               {mobileMenuOpen ? (
                 <X className="h-5 w-5" aria-hidden="true" />
@@ -250,19 +213,19 @@ export function Header() {
               animate={{ x: 0 }}
               exit={shouldReduceMotion ? { x: 0 } : { x: '100%' }}
               transition={{ type: 'tween', duration: 0.22 }}
-              className="ml-auto flex h-full w-full max-w-md flex-col justify-between overflow-y-auto bg-papel dark:bg-papel-dark p-6 text-stone-900 dark:text-stone-100 shadow-2xl"
+              className="ml-auto flex h-full w-full max-w-md flex-col justify-between overflow-y-auto bg-neutral-950 p-6 text-white shadow-2xl border-l border-neutral-800"
             >
               <div>
-                <div className="flex items-center justify-between border-b border-stone-200 dark:border-paramo-800 pb-4">
+                <div className="flex items-center justify-between border-b border-neutral-800 pb-4">
                   <div className="flex items-center gap-2.5">
                     <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-paramo-700 text-white">
                       <Sprout className="h-5 w-5" aria-hidden="true" />
                     </span>
                     <div>
-                      <p className="font-serif text-sm font-bold">
+                      <p className="font-serif text-sm font-bold text-white">
                         Escuela Técnica Agroturística
                       </p>
-                      <p className="text-xs text-stone-600 dark:text-stone-400">
+                      <p className="text-xs text-neutral-400">
                         La Mesa de Esnujaque · Anteproyecto 2026
                       </p>
                     </div>
@@ -271,7 +234,7 @@ export function Header() {
                     type="button"
                     onClick={() => setMobileMenuOpen(false)}
                     aria-label="Cerrar menú"
-                    className="rounded-xl border border-stone-300 dark:border-paramo-700 p-2 text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-paramo-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-paramo-600"
+                    className="rounded-xl border border-neutral-700 p-2 text-neutral-200 hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
                   >
                     <X className="h-5 w-5" aria-hidden="true" />
                   </button>
@@ -288,10 +251,10 @@ export function Header() {
                             aria-current={active ? 'page' : undefined}
                             onClick={() => setMobileMenuOpen(false)}
                             className={cn(
-                              'flex items-center justify-between rounded-xl px-4 py-3 text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-paramo-600',
+                              'flex items-center justify-between rounded-xl px-4 py-3 text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300',
                               active
-                                ? 'bg-paramo-700 text-white font-semibold'
-                                : 'text-stone-800 dark:text-stone-200 hover:bg-stone-200/70 dark:hover:bg-paramo-900/60'
+                                ? 'bg-amber-400 text-stone-950 font-bold'
+                                : 'text-neutral-200 hover:bg-neutral-900 hover:text-white'
                             )}
                           >
                             <span>{item.label}</span>
@@ -308,11 +271,11 @@ export function Header() {
                 </nav>
               </div>
 
-              <div className="mt-8 space-y-3 border-t border-stone-200 dark:border-paramo-800 pt-5">
+              <div className="mt-8 space-y-3 border-t border-neutral-800 pt-5">
                 <Link
                   href="/participa"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex w-full items-center justify-center rounded-xl bg-paramo-700 px-5 py-3 text-base font-bold text-white shadow-sm hover:bg-paramo-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-paramo-600"
+                  className="flex w-full items-center justify-center rounded-xl bg-amber-400 px-5 py-3 text-base font-bold text-stone-950 shadow-sm hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
                 >
                   Participá en la consulta
                 </Link>
@@ -320,12 +283,12 @@ export function Header() {
                   href={siteConfig.pdfUrl}
                   download="Anteproyecto-Escuela-Tecnica-Agroturistica-La-Mesa-de-Esnujaque.pdf"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-paramo-700 dark:border-paramo-400 px-5 py-3 text-base font-semibold text-paramo-800 dark:text-paramo-200 hover:bg-paramo-50 dark:hover:bg-paramo-900/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-paramo-600"
+                  className="flex w-full items-center justify-center gap-2 rounded-xl border border-neutral-700 bg-neutral-900 px-5 py-3 text-base font-semibold text-white hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
                 >
                   <Download className="h-5 w-5" aria-hidden="true" />
                   <span>Descargar PDF completo</span>
                 </a>
-                <p className="text-center text-xs text-stone-600 dark:text-stone-400 pt-1">
+                <p className="text-center text-xs text-neutral-400 pt-1">
                   {siteConfig.legalDisclaimer}
                 </p>
               </div>
