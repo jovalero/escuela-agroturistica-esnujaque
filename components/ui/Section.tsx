@@ -12,12 +12,10 @@ export function Section({
   ...props
 }: SectionProps) {
   const variantStyles = {
-    default: 'bg-white text-stone-950',
-    muted:
-      'bg-gradient-to-br from-paramo-950 via-paramo-900 to-paramo-800 text-white border-y border-paramo-700/80',
-    dark: 'bg-paramo-950 text-white border-y border-paramo-800',
-    accent:
-      'bg-gradient-to-br from-paramo-950 via-paramo-900 to-paramo-800 text-white border-y border-paramo-700/80',
+    default: 'bg-white text-stone-900 border-y border-stone-200/80',
+    muted: 'bg-[#1B4332] text-white border-y border-[#143326]',
+    dark: 'bg-[#143326] text-white border-y border-[#0d2218]',
+    accent: 'bg-[#1B4332] text-white border-y border-[#143326]',
   };
 
   return (

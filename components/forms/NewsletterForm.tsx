@@ -83,7 +83,7 @@ export function NewsletterForm() {
             placeholder="tu.correo@ejemplo.com"
             aria-invalid={Boolean(errors.email)}
             aria-describedby={errors.email ? 'newsletter-email-error' : undefined}
-            className="w-full rounded-xl border border-paramo-700 bg-paramo-900/90 pl-9 pr-3 py-2.5 text-sm text-white placeholder:text-paramo-300/80 focus:border-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-300"
+            className="w-full rounded-xl border border-emerald-700 bg-[#0F241A] pl-9 pr-3 py-2.5 text-sm text-white placeholder:text-emerald-300/60 focus:border-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-300"
             {...register('email')}
           />
         </div>
@@ -99,12 +99,12 @@ export function NewsletterForm() {
           id="newsletter-consent"
           type="checkbox"
           aria-invalid={Boolean(errors.consentimiento)}
-          className="mt-1 h-4 w-4 rounded border-paramo-600 bg-paramo-900 text-amber-400 focus:ring-2 focus:ring-amber-300"
+          className="mt-1 h-4 w-4 rounded border-emerald-600 bg-[#0F241A] text-amber-400 focus:ring-2 focus:ring-amber-300"
           {...register('consentimiento')}
         />
-        <label htmlFor="newsletter-consent" className="text-xs leading-snug text-paramo-100/90">
+        <label htmlFor="newsletter-consent" className="text-xs leading-snug text-emerald-100">
           Acepto recibir avisos sobre asambleas y avances conforme a la{' '}
-          <Link href="/privacidad" className="underline hover:text-amber-300">
+          <Link href="/privacidad" className="text-amber-300 underline hover:text-amber-200">
             Política de Privacidad
           </Link>
           .

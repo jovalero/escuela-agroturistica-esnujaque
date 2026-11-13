@@ -14,10 +14,6 @@
     color: #0a0a0a;
   }
 
-  p, li {
-    color: #111111;
-  }
-
   html.dark {
     background-color: #0e1713;
     color: #f3f4f6;

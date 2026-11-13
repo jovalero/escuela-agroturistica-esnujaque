@@ -31,15 +31,15 @@ const PILLAR_ICONS = {
 export default function HomePage() {
   return (
     <>
-      {/* 1. HERO (Sobrio, humano y centrado en la comunidad) */}
-      <section className="relative overflow-hidden bg-[#FAF8F5] text-stone-900 pt-8 pb-14 sm:py-20 border-b border-stone-200/80">
+      {/* 1. HERO (Verde oscuro andino, sobrio y conectado con la identidad local) */}
+      <section className="relative overflow-hidden bg-[#1B4332] text-white pt-8 pb-14 sm:py-20 border-b border-[#143326]">
         <Container className="relative z-10">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             {/* Texto principal del Hero */}
             <div className="lg:col-span-6 space-y-6">
               {/* Emblema oficial y etiqueta del anteproyecto */}
               <div className="flex items-center gap-3">
-                <div className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-emerald-800/20 bg-[#FAF8F5] p-0.5 shadow-sm">
+                <div className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-amber-300/70 bg-[#FAF8F5] p-0.5 shadow-sm">
                   <Image
                     src={siteConfig.logo.emblem}
                     alt={siteConfig.logo.alt}
@@ -50,19 +50,19 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="inline-flex">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-emerald-600/30 bg-emerald-50 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-emerald-950">
-                    <span className="h-2 w-2 rounded-full bg-emerald-600" aria-hidden="true" />
+                  <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-900/80 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-amber-300 shadow-xs">
+                    <span className="h-2 w-2 rounded-full bg-amber-400" aria-hidden="true" />
                     Anteproyecto 2026 · En consulta comunitaria
                   </span>
                 </div>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-[2.85rem] font-bold leading-tight tracking-tight text-stone-900">
+              <h1 className="font-serif text-3xl sm:text-4xl lg:text-[2.85rem] font-bold leading-tight tracking-tight text-white">
                 {siteConfig.name}
               </h1>
 
               {/* Un solo texto, corto, directo y natural */}
-              <p className="text-base sm:text-lg text-stone-700 leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg text-emerald-50 leading-relaxed max-w-xl">
                 Una escuela técnica para que los jóvenes de La Mesa de Esnujaque puedan formarse en agricultura, turismo y cuidado del ambiente sin tener que irse del pueblo. Es un anteproyecto y queremos construirlo con la comunidad.
               </p>
 
@@ -71,7 +71,7 @@ export default function HomePage() {
                 <Button
                   href="/documento"
                   size="lg"
-                  className="bg-emerald-800 hover:bg-emerald-900 text-white font-bold shadow-xs border border-emerald-900"
+                  className="bg-amber-400 hover:bg-amber-300 text-stone-950 font-bold shadow-xs border border-amber-500"
                 >
                   <BookOpen className="h-5 w-5" aria-hidden="true" />
                   <span>Leer el anteproyecto</span>
@@ -80,25 +80,25 @@ export default function HomePage() {
                   href="/participa"
                   size="lg"
                   variant="outline"
-                  className="border-amber-500 bg-amber-400 text-stone-950 hover:bg-amber-300 font-bold shadow-xs"
+                  className="border-white/70 bg-white/10 text-white hover:bg-white/20 font-bold shadow-xs"
                 >
-                  <HeartHandshake className="h-5 w-5 text-stone-950" aria-hidden="true" />
+                  <HeartHandshake className="h-5 w-5 text-amber-300" aria-hidden="true" />
                   <span>Participá</span>
                 </Button>
               </div>
 
               {/* Datos breves de contexto */}
-              <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-stone-600 border-t border-stone-200">
+              <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-emerald-100 border-t border-emerald-800/80">
                 <span>
-                  <strong className="text-stone-900 font-bold">Autor:</strong> {siteConfig.author.name}
+                  <strong className="text-white font-bold">Autor:</strong> {siteConfig.author.name}
                 </span>
                 <span>
-                  <strong className="text-stone-900 font-bold">Estructura:</strong> 21 capítulos íntegros
+                  <strong className="text-white font-bold">Estructura:</strong> 21 capítulos íntegros
                 </span>
                 <a
                   href={siteConfig.pdfUrl}
                   download="Anteproyecto-Escuela-Tecnica-Agroturistica-La-Mesa-de-Esnujaque.pdf"
-                  className="inline-flex items-center gap-1 font-semibold text-emerald-800 underline hover:text-emerald-950"
+                  className="inline-flex items-center gap-1 font-semibold text-amber-300 underline hover:text-amber-200"
                 >
                   <Download className="h-3.5 w-3.5" aria-hidden="true" />
                   Descargar PDF completo
@@ -116,23 +116,23 @@ export default function HomePage() {
                 aspectRatio="landscape"
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="border-stone-300/80 shadow-lg"
+                className="border-emerald-700/60 shadow-2xl"
               />
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Franja destacada única de aviso legal comunitario */}
-      <div className="border-b border-emerald-900/10 bg-[#EBF2EB] py-3 px-4 text-xs sm:text-sm text-emerald-950 print:hidden">
+      {/* Franja destacada única de aviso legal comunitario (Verde oscuro) */}
+      <div className="border-b border-emerald-900/80 bg-[#143326] py-3 px-4 text-xs sm:text-sm text-emerald-100 print:hidden">
         <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
-          <p className="leading-relaxed">
-            <strong className="text-emerald-900 font-semibold">Aviso comunitario: </strong>
-            {siteConfig.legalDisclaimer}
+          <p className="leading-relaxed text-emerald-100">
+            <strong className="text-amber-300 font-semibold">Aviso comunitario: </strong>
+            <span className="text-emerald-100">{siteConfig.legalDisclaimer}</span>
           </p>
           <Link
             href="/documento"
-            className="text-xs font-bold text-emerald-900 underline hover:text-emerald-950 shrink-0"
+            className="text-xs font-bold text-amber-300 underline hover:text-amber-200 shrink-0"
           >
             Conocer antecedentes legales
           </Link>
