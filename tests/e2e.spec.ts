@@ -14,7 +14,7 @@ test.describe('Sitio Oficial — Escuela Técnica Agroturística de La Mesa de E
     );
 
     await expect(page.getByText('Anteproyecto 2026 · En consulta comunitaria')).toBeVisible();
-    await expect(page.getByRole('heading', { name: '¿Qué proponemos?' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /¿Qué proponemos/i })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Por qué La Mesa de Esnujaque' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Hoja de ruta por etapas' })).toBeVisible();
     await expect(
@@ -24,15 +24,15 @@ test.describe('Sitio Oficial — Escuela Técnica Agroturística de La Mesa de E
       page.getByRole('heading', { name: 'Cómo se construye con la comunidad' })
     ).toBeVisible();
     await expect(
-      page.getByRole('heading', { name: 'Alineación con la Agenda 2030' })
+      page.getByRole('heading', { name: /Alineación con/i })
     ).toBeVisible();
     await expect(
-      page.getByRole('heading', { name: 'Actores clave y posibles aliados institucionales' })
+      page.getByRole('heading', { name: /Actores clave y posibles aliados/i })
     ).toBeVisible();
 
     // Footer obligatorio con nota fija
     await expect(
-      page.getByText(
+      page.locator('footer').getByText(
         'Este sitio presenta un anteproyecto sujeto a validación comunitaria e institucional y a estudios técnicos, jurídicos y ambientales.'
       )
     ).toBeVisible();

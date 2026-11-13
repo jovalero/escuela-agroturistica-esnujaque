@@ -84,10 +84,10 @@ export default function ContactoPage() {
                     <Mail className="h-5 w-5 text-paramo-700 dark:text-paramo-300 shrink-0 mt-0.5" aria-hidden="true" />
                     <div>
                       <p className="font-bold text-stone-900 dark:text-stone-100">
-                        Correo electrónico
+                        Atención directa
                       </p>
                       <p className="font-medium text-paramo-800 dark:text-paramo-200">
-                        {siteConfig.contact.emailDisplay}
+                        A través del formulario de esta página o en asambleas comunitarias
                       </p>
                     </div>
                   </div>
@@ -96,24 +96,25 @@ export default function ContactoPage() {
                     <MessageCircle className="h-5 w-5 text-paramo-700 dark:text-paramo-300 shrink-0 mt-0.5" aria-hidden="true" />
                     <div>
                       <p className="font-bold text-stone-900 dark:text-stone-100">WhatsApp</p>
-                      <p className="font-medium text-paramo-800 dark:text-paramo-200">
-                        {siteConfig.contact.whatsappDisplay}
-                      </p>
+                      <a
+                        href={siteConfig.contact.socialLinks[0].url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-emerald-700 dark:text-emerald-400 underline hover:text-emerald-800"
+                      >
+                        Compartir anteproyecto por WhatsApp
+                      </a>
                     </div>
                   </div>
                 </div>
 
                 <div className="pt-4 border-t border-stone-200 dark:border-paramo-800">
                   <p className="text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-2">
-                    Redes y canales comunitarios
+                    Participación en La Mesa de Esnujaque
                   </p>
-                  <ul className="space-y-1.5 text-xs text-stone-600 dark:text-stone-300">
-                    {siteConfig.contact.socialLinks.map((social) => (
-                      <li key={social.name}>
-                        <strong>{social.name}:</strong> {social.placeholder}
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-xs text-stone-600 dark:text-stone-300 leading-relaxed">
+                    Las observaciones, aportes y consultas institucionales se reciben mediante el formulario contiguo y se socializan en las asambleas con productores, docentes y vecinos.
+                  </p>
                 </div>
               </Card>
             </div>

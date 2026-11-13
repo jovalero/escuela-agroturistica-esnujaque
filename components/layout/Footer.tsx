@@ -68,13 +68,13 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <Mail className="h-4 w-4 text-amber-300 shrink-0 mt-0.5" aria-hidden="true" />
                 <div>
-                  <span className="block text-paramo-200">Correo de contacto:</span>
-                  <a
-                    href={`mailto:${siteConfig.contact.email}`}
+                  <span className="block text-paramo-200">Contacto con el autor:</span>
+                  <Link
+                    href="/contacto"
                     className="font-semibold text-amber-300 underline hover:text-amber-200"
                   >
-                    {siteConfig.contact.emailDisplay}
-                  </a>
+                    Formulario de contacto y aportes
+                  </Link>
                 </div>
               </li>
             </ul>
@@ -85,7 +85,7 @@ export function Footer() {
                 href={siteConfig.contact.socialLinks[0].url}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Contactar o compartir por WhatsApp"
+                aria-label="Compartir anteproyecto por WhatsApp"
                 className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-3.5 py-2 text-xs font-bold text-white hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
               >
                 <svg
@@ -95,12 +95,12 @@ export function Footer() {
                 >
                   <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.82 14.01c-.24.68-1.41 1.3-1.95 1.38-.5.08-1.13.11-1.83-.11-.42-.13-.97-.31-1.66-.61-2.92-1.26-4.83-4.21-4.98-4.41-.14-.2-1.19-1.58-1.19-3.02 0-1.44.75-2.15 1.02-2.44.27-.29.59-.36.79-.36.2 0 .4.01.57.01.18.01.43-.07.67.51.24.59.82 2.02.89 2.17.07.15.12.32.02.52-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.61.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.36 1.45.29.15.46.12.63-.07.17-.2.73-.85.93-1.15.2-.29.39-.24.66-.15.27.1 1.71.81 2 .95.29.15.49.22.56.34.07.12.07.71-.17 1.39z" />
                 </svg>
-                <span>WhatsApp: {siteConfig.contact.whatsappDisplay}</span>
+                <span>Compartir en WhatsApp</span>
               </a>
 
               <div className="mt-3 flex items-center gap-2.5">
                 <a
-                  href="https://www.facebook.com/sharer/sharer.php?u=https://escuela-agroturistica-esnujaque.vercel.app"
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(siteConfig.url)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Compartir en Facebook"
@@ -111,7 +111,7 @@ export function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="https://twitter.com/intent/tweet?text=Escuela%20T%C3%A9cnica%20Agrotur%C3%ADstica%20de%20La%20Mesa%20de%20Esnujaque"
+                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Escuela Técnica Agroturística de La Mesa de Esnujaque')}&url=${encodeURIComponent(siteConfig.url)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Compartir en X (Twitter)"
@@ -131,7 +131,7 @@ export function Footer() {
               Navegación del sitio
             </h2>
             <ul className="space-y-2 text-sm">
-              {siteConfig.navigation.map((item) => (
+              {siteConfig.allNavigation.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}

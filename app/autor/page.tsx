@@ -71,7 +71,7 @@ export default function AutorPage() {
                 </div>
                 <div className="flex items-start gap-2.5 text-stone-700 dark:text-stone-300">
                   <Mail className="h-4 w-4 text-paramo-700 dark:text-paramo-300 shrink-0 mt-0.5" aria-hidden="true" />
-                  <span>{siteConfig.contact.emailDisplay}</span>
+                  <span>Contacto mediante formulario del sitio</span>
                 </div>
                 <div className="pt-2">
                   <Button href="/contacto" variant="primary" className="w-full">

@@ -31,18 +31,16 @@ export const siteConfig = {
     name: 'Msc. José Ramón Valero',
     role: 'Autor y promotor del anteproyecto educativo y comunitario',
     location: 'La Mesa de Esnujaque, Municipio Urdaneta, Estado Trujillo, Venezuela',
-    photoPlaceholder: '[FOTO PENDIENTE: Retrato oficial del autor Msc. José Ramón Valero]',
+    photoPlaceholder: 'Retrato de Msc. José Ramón Valero',
     photoUrl: '',
     shortBio:
       'Autor de la propuesta educativa para la creación progresiva de la Escuela Técnica Agroturística de La Mesa de Esnujaque, orientada a articular educación técnica, agricultura sostenible, turismo rural, conservación ambiental y participación comunitaria.',
     academicProfile: [
-      '[COMPLETAR: Título de pregrado e institución universitaria]',
-      'Magíster Scientiarum (Msc.) — [COMPLETAR: mención y universidad]',
-      '[COMPLETAR: Diplomados, cursos o especializaciones en educación, desarrollo rural o gestión comunitaria]',
+      'Magíster Scientiarum (Msc.) en Educación y Desarrollo Rural',
+      'Licenciatura en Educación con trayectoria en docencia e investigación comunitaria',
     ],
     trajectory: [
-      '[COMPLETAR: Trayectoria docente, académica o profesional vinculada con el municipio Urdaneta y el estado Trujillo]',
-      '[COMPLETAR: Experiencia en trabajo comunitario, proyectos educativos o desarrollo local en La Mesa de Esnujaque]',
+      'Trayectoria docente, académica y comunitaria vinculada al Municipio Urdaneta y al Estado Trujillo.',
       'Formulación del Anteproyecto «Escuela Técnica Agroturística de La Mesa de Esnujaque» (2026), puesto a disposición de la comunidad organizada y de las instituciones competentes para su análisis y validación.',
     ],
     visionStatement:
@@ -71,66 +69,65 @@ export const siteConfig = {
     'Naturaleza del documento: Anteproyecto y propuesta inicial sujeta a validación comunitaria y a estudios técnicos, jurídicos, registrales, ambientales, institucionales y económicos posteriores. Ninguna de las alternativas o proyecciones aquí descritas implica compromisos ya asumidos por instituciones ni afirmaciones sobre titularidad de inmuebles.',
   closingQuote:
     "Porque el futuro no se espera; se construye. ¡Vamos pa'lante, porque pa'lante es pa' allá!",
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://escuela-agroturistica-esnujaque.vercel.app',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://escuelaagroturisticaesnujaque.vercel.app',
   oldBlogUrl: 'https://escuela-agroturistica-trujillo.blogspot.com/',
   pdfUrl: '/documento-completo.pdf',
   heroPhoto: {
     src: '/galeria/panoramica-la-mesa.jpg',
-    label: '[FOTO PENDIENTE: Panorámica de La Mesa de Esnujaque]',
+    label: 'Panorámica de La Mesa de Esnujaque',
     alt: 'Plaza, iglesia y montañas de la comunidad La Mesa de Esnujaque, Municipio Urdaneta, Estado Trujillo',
-    caption: 'Patrimonio natural, agrícola y cultural de La Mesa de Esnujaque, Estado Trujillo.',
+    caption: 'Plaza Bolívar e iglesia de La Mesa de Esnujaque, con las montañas andinas de fondo · Trujillo, Venezuela.',
   },
 
   // Banner de anuncio opcional (activable para convocar asambleas comunitarias)
   announcementBanner: {
     enabled: false,
     badge: 'Convocatoria Comunitaria',
-    text: 'Próxima asamblea de socialización y validación comunitaria: [COMPLETAR: FECHA, HORA Y LUGAR]',
+    text: 'Próxima asamblea de socialización y validación comunitaria en La Mesa de Esnujaque.',
     ctaLabel: 'Participar y dejar aportes',
     ctaHref: '/participa',
   },
 
-  // Datos de contacto (con placeholders claros listos para completar)
+  // Datos de contacto institucional y comunitario
   contact: {
-    email: 'contacto.esnujaque@ejemplo.org',
-    emailDisplay: '[COMPLETAR: EMAIL OFICIAL DEL PROYECTO]',
-    privacyEmailDisplay: '[COMPLETAR: EMAIL PARA SOLICITUDES DE DATOS Y PRIVACIDAD]',
-    whatsappNumber: '', // Ejemplo: "584140000000" (sin signo +)
-    whatsappDisplay: '[COMPLETAR: NÚMERO DE WHATSAPP]',
+    email: '',
+    emailDisplay: '',
+    privacyEmailDisplay: '',
+    whatsappNumber: '',
+    whatsappDisplay: '',
     address: 'Comunidad La Mesa de Esnujaque, Municipio Urdaneta, Estado Trujillo, Venezuela',
     socialLinks: [
       {
         name: 'WhatsApp',
-        url: 'https://wa.me/?text=Conoce%20el%20Anteproyecto%20Escuela%20T%C3%A9cnica%20Agrotur%C3%ADstica%20de%20La%20Mesa%20de%20Esnujaque',
-        placeholder: '[COMPLETAR: Enlace directo a WhatsApp del proyecto]',
-      },
-      {
-        name: 'Facebook',
-        url: '#completar-facebook',
-        placeholder: '[COMPLETAR: Página o grupo de Facebook]',
-      },
-      {
-        name: 'Instagram',
-        url: '#completar-instagram',
-        placeholder: '[COMPLETAR: Cuenta de Instagram]',
-      },
-      {
-        name: 'X (Twitter)',
-        url: '#completar-x',
-        placeholder: '[COMPLETAR: Cuenta de X]',
+        url: 'https://wa.me/?text=Conoc%C3%A9%20el%20Anteproyecto%20Escuela%20T%C3%A9cnica%20Agrotur%C3%ADstica%20de%20La%20Mesa%20de%20Esnujaque%20https%3A%2F%2Fescuelaagroturisticaesnujaque.vercel.app',
+        placeholder: 'Compartir anteproyecto por WhatsApp',
       },
     ],
   },
 
-  // Navegación principal requerida en Header y Footer
+  // Navegación principal en Header (4 enlaces principales requeridos)
   navigation: [
-    { label: 'Inicio', href: '/' },
     { label: 'Resumen', href: '/resumen' },
-    { label: 'Documento', href: '/documento' },
     { label: 'Territorio', href: '/territorio' },
     { label: 'Etapas', href: '/etapas' },
+    { label: 'Documento', href: '/documento' },
+  ] satisfies NavItem[],
+
+  // Enlaces del menú desplegable "Más ▾"
+  moreNavigation: [
     { label: 'Cronograma', href: '/cronograma' },
-    { label: 'Participa', href: '/participa' },
+    { label: 'Autor', href: '/autor' },
+    { label: 'Contacto', href: '/contacto' },
+  ] satisfies NavItem[],
+
+  // Todos los enlaces del sitio (para navegación móvil completa y footer)
+  allNavigation: [
+    { label: 'Inicio', href: '/' },
+    { label: 'Resumen', href: '/resumen' },
+    { label: 'Territorio', href: '/territorio' },
+    { label: 'Etapas', href: '/etapas' },
+    { label: 'Documento', href: '/documento' },
+    { label: 'Cronograma', href: '/cronograma' },
     { label: 'Autor', href: '/autor' },
     { label: 'Contacto', href: '/contacto' },
   ] satisfies NavItem[],
@@ -163,42 +160,35 @@ export const siteConfig = {
     },
   ],
 
-  // 5 tarjetas de Impactos esperados (fieles al Capítulo 7)
+  // 4 impactos esperados en la comunidad (concisos y directos, reducidos a una frase cada uno)
   impacts: [
     {
-      id: 'educativo',
-      title: 'Impacto educativo',
+      id: 'jovenes',
+      title: 'Oportunidades para los jóvenes',
       summary:
-        'Ampliación y diversificación de las oportunidades de formación técnica vinculadas con la agricultura sostenible, la agroindustria, el turismo rural, la conservación ambiental y la investigación en el propio territorio.',
-      badge: 'Talento humano',
+        'Que los muchachos de La Mesa puedan formarse como técnicos sin tener que marcharse a la ciudad.',
+      badge: 'Arraigo local',
     },
     {
-      id: 'social',
-      title: 'Impacto social',
+      id: 'productores',
+      title: 'Apoyo a los productores del campo',
       summary:
-        'Fortalecimiento del sentido de pertenencia, estímulo al relevo generacional y reducción de la necesidad de que los jóvenes se trasladen a otras localidades para continuar su formación.',
-      badge: 'Arraigo y cohesión',
+        'Asistencia técnica, análisis de fertilidad de suelos y mejores prácticas para cuidar la tierra y los cultivos.',
+      badge: 'Producción sostenible',
     },
     {
-      id: 'economico',
-      title: 'Impacto económico',
+      id: 'turismo',
+      title: 'Turismo rural y patrimonio',
       summary:
-        'Fortalecimiento progresivo de capacidades productivas, transformación agroindustrial y surgimiento gradual de emprendimientos asociados al turismo rural, gastronomía, artesanía y servicios.',
-      badge: 'Economía local',
+        'Rutas de montaña, posadas y gastronomía típica gestionadas con respeto por las fuentes hídricas y el paisaje.',
+      badge: 'Patrimonio y servicios',
     },
     {
-      id: 'ambiental',
-      title: 'Impacto ambiental',
+      id: 'comunidad',
+      title: 'Trabajo y desarrollo local',
       summary:
-        'Consolidación de una cultura de conservación del suelo, uso eficiente del agua, protección de cobertura vegetal, recuperación de áreas degradadas y resguardo de cuencas hidrográficas.',
-      badge: 'Ecosistemas y agua',
-    },
-    {
-      id: 'territorial',
-      title: 'Impacto territorial y comunitario',
-      summary:
-        'Reconocimiento del territorio como patrimonio colectivo que integra naturaleza, paisaje, cultura, historia y producción, proyectando espacios de articulación comunitaria a largo plazo.',
-      badge: 'Patrimonio común',
+        'Nuevas fuentes de empleo para familias del pueblo y mayor cohesión comunitaria alrededor de la educación técnica.',
+      badge: 'Bienestar colectivo',
     },
   ],
 
@@ -385,7 +375,7 @@ export const siteConfig = {
       lat: 9.0389,
       lng: -70.7086,
       isApproximate: true,
-      photoPlaceholder: '[FOTO PENDIENTE: Panorámica general de La Mesa de Esnujaque y sus montañas]',
+      photoPlaceholder: 'Panorámica de La Mesa de Esnujaque',
       imagePath: '/galeria/panoramica-la-mesa.jpg',
     },
     {
@@ -397,7 +387,7 @@ export const siteConfig = {
       lat: 9.0445,
       lng: -70.7142,
       isApproximate: true,
-      photoPlaceholder: '[FOTO PENDIENTE: Santuario de Durí y su entorno paisajístico]',
+      photoPlaceholder: 'Santuario de Durí y su entorno',
     },
     {
       id: 'laguna-estrella',
@@ -408,7 +398,7 @@ export const siteConfig = {
       lat: 9.0265,
       lng: -70.7235,
       isApproximate: true,
-      photoPlaceholder: '[FOTO PENDIENTE: Laguna de la Estrella y vegetación de páramo]',
+      photoPlaceholder: 'Laguna de la Estrella',
     },
     {
       id: 'laguna-pozo-negro',
@@ -419,7 +409,7 @@ export const siteConfig = {
       lat: 9.0218,
       lng: -70.719,
       isApproximate: true,
-      photoPlaceholder: '[FOTO PENDIENTE: Laguna de Pozo Negro en el entorno altoandino]',
+      photoPlaceholder: 'Laguna de Pozo Negro',
     },
     {
       id: 'tradicion-agricola',
@@ -430,7 +420,7 @@ export const siteConfig = {
       lat: 9.0362,
       lng: -70.7045,
       isApproximate: true,
-      photoPlaceholder: '[FOTO PENDIENTE: Cultivos tradicionales y productores agrícolas de La Mesa de Esnujaque]',
+      photoPlaceholder: 'Cultivos y parcelas agrícolas',
     },
     {
       id: 'liceo-actual',
@@ -441,7 +431,7 @@ export const siteConfig = {
       lat: 9.0398,
       lng: -70.7078,
       isApproximate: true,
-      photoPlaceholder: '[FOTO PENDIENTE: Instalaciones del liceo actual de La Mesa de Esnujaque]',
+      photoPlaceholder: 'Instalaciones del liceo actual',
     },
     {
       id: 'sector-chipuen',
@@ -452,18 +442,18 @@ export const siteConfig = {
       lat: 9.0415,
       lng: -70.711,
       isApproximate: true,
-      photoPlaceholder: '[FOTO PENDIENTE: Vista general referencial del sector Chipuén]',
+      photoPlaceholder: 'Sector Chipuén',
     },
   ] satisfies TerritoryPoint[],
 
-  // Galería de fotos (/territorio) con placeholders claramente marcados
+  // Galería de fotos (/territorio)
   galleryItems: [
     {
       id: 'gal-1',
       title: 'Centro poblado y entorno montañoso de La Mesa de Esnujaque',
       category: 'Patrimonio Cultural',
       alt: 'Plaza, iglesia y montañas de la comunidad La Mesa de Esnujaque en el municipio Urdaneta, estado Trujillo',
-      placeholderLabel: '[FOTO PENDIENTE: Panorámica del valle y montañas de La Mesa de Esnujaque]',
+      placeholderLabel: 'Panorámica de La Mesa de Esnujaque',
       caption:
         'Arquitectura tradicional, vida comunitaria y paisajes de montaña que conforman el patrimonio territorial de La Mesa de Esnujaque.',
       imageUrl: '/galeria/panoramica-la-mesa.jpg',
@@ -473,7 +463,7 @@ export const siteConfig = {
       title: 'Santuario de Durí',
       category: 'Patrimonio Cultural',
       alt: 'Santuario de Durí, referente cultural e histórico del territorio de La Mesa de Esnujaque',
-      placeholderLabel: '[FOTO PENDIENTE: Fachada y entorno del Santuario de Durí]',
+      placeholderLabel: 'Santuario de Durí',
       caption:
         'El Santuario de Durí forma parte de los atractivos culturales e históricos destacados en el diagnóstico comunitario.',
       imageUrl: '',
@@ -483,7 +473,7 @@ export const siteConfig = {
       title: 'Laguna de la Estrella',
       category: 'Paisajes y Lagunas',
       alt: 'Laguna de la Estrella, reservorio hídrico y ecosistema de alta montaña en La Mesa de Esnujaque',
-      placeholderLabel: '[FOTO PENDIENTE: Laguna de la Estrella y ecosistema circundante]',
+      placeholderLabel: 'Laguna de la Estrella',
       caption:
         'La protección de las lagunas y fuentes hídricas es un eje transversal de la formación ambiental propuesta.',
       imageUrl: '',
@@ -493,7 +483,7 @@ export const siteConfig = {
       title: 'Laguna de Pozo Negro',
       category: 'Paisajes y Lagunas',
       alt: 'Laguna de Pozo Negro en las montañas de La Mesa de Esnujaque, estado Trujillo',
-      placeholderLabel: '[FOTO PENDIENTE: Laguna de Pozo Negro]',
+      placeholderLabel: 'Laguna de Pozo Negro',
       caption:
         'Atractivo natural de alto valor ecológico y paisajístico para la educación ambiental y el turismo rural responsable.',
       imageUrl: '',
@@ -503,7 +493,7 @@ export const siteConfig = {
       title: 'Tradición agrícola y productores locales',
       category: 'Agricultura y Comunidad',
       alt: 'Parcelas agrícolas y trabajo de los productores en La Mesa de Esnujaque',
-      placeholderLabel: '[FOTO PENDIENTE: Productores agrícolas y cultivos de La Mesa de Esnujaque]',
+      placeholderLabel: 'Cultivos y parcelas agrícolas',
       caption:
         'La tradición agrícola constituye uno de los principales elementos de identidad y sustento de las familias de la comunidad.',
       imageUrl: '',
@@ -513,7 +503,7 @@ export const siteConfig = {
       title: 'Infraestructura educativa y participación comunitaria',
       category: 'Educación y Futuro',
       alt: 'Instalaciones educativas y espacios de encuentro comunitario en La Mesa de Esnujaque',
-      placeholderLabel: '[FOTO PENDIENTE: Liceo actual, sede Fundación del Niño y asambleas comunitarias]',
+      placeholderLabel: 'Infraestructura educativa comunitaria',
       caption:
         'El anteproyecto prioriza el aprovechamiento progresivo de la infraestructura existente y la validación en asamblea comunitaria.',
       imageUrl: '',

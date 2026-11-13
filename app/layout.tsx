@@ -25,13 +25,16 @@ const plusJakarta = Plus_Jakarta_Sans({
   display: 'swap',
 });
 
+const shortMetaDescription =
+  'Propuesta comunitaria para crear una Escuela Técnica Agroturística en La Mesa de Esnujaque, Trujillo. Formación técnica para los jóvenes, agricultura sostenible y turismo rural.';
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: `${siteConfig.name} | Anteproyecto Educativo y Comunitario 2026`,
     template: `%s | ${siteConfig.name}`,
   },
-  description: `${siteConfig.documentTitle}. Autor: ${siteConfig.author.name}. Comunidad La Mesa de Esnujaque, Municipio Urdaneta, Estado Trujillo, Venezuela.`,
+  description: shortMetaDescription,
   keywords: [
     'Escuela Técnica Agroturística',
     'La Mesa de Esnujaque',
@@ -58,7 +61,7 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     siteName: siteConfig.name,
     title: `${siteConfig.name} · Anteproyecto 2026`,
-    description: siteConfig.documentTitle,
+    description: shortMetaDescription,
     images: [
       {
         url: '/api/og',
@@ -71,7 +74,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `${siteConfig.name} · Anteproyecto 2026`,
-    description: siteConfig.documentTitle,
+    description: shortMetaDescription,
     images: ['/api/og'],
   },
   robots: {

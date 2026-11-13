@@ -124,7 +124,7 @@ Los formularios (`/participa`, `/contacto` y suscripción del Footer) validan en
 
 | Variable | Descripción |
 |---|---|
-| `NEXT_PUBLIC_SITE_URL` | URL pública de producción (ej. `https://escuela-agroturistica-esnujaque.vercel.app` o tu dominio propio). |
+| `NEXT_PUBLIC_SITE_URL` | URL pública de producción (ej. `https://escuelaagroturisticaesnujaque.vercel.app` o tu dominio propio). |
 | `RESEND_API_KEY` | API Key de [Resend](https://resend.com) para recibir notificaciones por email cada vez que alguien complete la encuesta, el buzón o el formulario de contacto. |
 | `CONTACT_RECEIVER_EMAIL` | Correo electrónico del autor o equipo donde llegarán los avisos de Resend. |
 | `RESEND_FROM_EMAIL` | Remitente configurado en Resend (por defecto `Anteproyecto Esnujaque <onboarding@resend.dev>`). |
