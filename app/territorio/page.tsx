@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { Compass, Droplets, Landmark, Mountain, Sprout } from 'lucide-react';
 import { siteConfig } from '@/data/site';
 import { getBreadcrumbJsonLd } from '@/lib/schema-org';
@@ -41,9 +42,21 @@ export default function TerritorioPage() {
 
       <Section variant="dark" className="py-12 sm:py-16">
         <Container>
-          <div className="flex flex-wrap items-center gap-2 mb-4">
-            <Badge variant="laguna">Municipio Urdaneta · Estado Trujillo</Badge>
-            <Badge variant="paramo">Patrimonio Natural, Agrícola y Cultural</Badge>
+          <div className="flex items-center gap-4 mb-4">
+            <div className="relative h-14 w-14 sm:h-16 sm:w-16 shrink-0 overflow-hidden rounded-full border-2 border-amber-300/60 bg-[#FAF8F5] p-0.5 shadow-md">
+              <Image
+                src={siteConfig.logo.emblem}
+                alt={siteConfig.logo.alt}
+                width={64}
+                height={64}
+                className="h-full w-full object-contain"
+                priority
+              />
+            </div>
+            <div className="flex flex-wrap items-center gap-2">
+              <Badge variant="laguna">Municipio Urdaneta · Estado Trujillo</Badge>
+              <Badge variant="paramo">Patrimonio Natural, Agrícola y Cultural</Badge>
+            </div>
           </div>
           <h1 className="font-serif text-3xl sm:text-5xl font-bold text-white max-w-4xl leading-tight">
             Patrimonio Territorial de La Mesa de Esnujaque

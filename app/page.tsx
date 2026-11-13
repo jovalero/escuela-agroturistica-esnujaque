@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   ArrowRight,
   BookOpen,
@@ -36,12 +37,24 @@ export default function HomePage() {
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             {/* Texto principal del Hero */}
             <div className="lg:col-span-6 space-y-6">
-              {/* Una sola etiqueta arriba */}
-              <div className="inline-flex">
-                <span className="inline-flex items-center gap-2 rounded-full border border-emerald-600/30 bg-emerald-50 px-3.5 py-1 text-xs sm:text-sm font-semibold text-emerald-950">
-                  <span className="h-2 w-2 rounded-full bg-emerald-600" aria-hidden="true" />
-                  Anteproyecto 2026 · En consulta comunitaria
-                </span>
+              {/* Emblema oficial y etiqueta del anteproyecto */}
+              <div className="flex items-center gap-3">
+                <div className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-emerald-800/20 bg-[#FAF8F5] p-0.5 shadow-sm">
+                  <Image
+                    src={siteConfig.logo.emblem}
+                    alt={siteConfig.logo.alt}
+                    width={56}
+                    height={56}
+                    className="h-full w-full object-contain"
+                    priority
+                  />
+                </div>
+                <div className="inline-flex">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-emerald-600/30 bg-emerald-50 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-emerald-950">
+                    <span className="h-2 w-2 rounded-full bg-emerald-600" aria-hidden="true" />
+                    Anteproyecto 2026 · En consulta comunitaria
+                  </span>
+                </div>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl lg:text-[2.85rem] font-bold leading-tight tracking-tight text-stone-900">
@@ -233,12 +246,23 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Ficha editorial territorial del pueblo */}
+            {/* Ficha editorial territorial del pueblo con emblema */}
             <div className="lg:col-span-5">
               <div className="rounded-2xl border border-emerald-700/60 bg-[#143326] p-6 text-white space-y-4 shadow-md">
-                <div className="flex items-center gap-2 border-b border-emerald-800 pb-3">
-                  <Compass className="h-5 w-5 text-amber-300" aria-hidden="true" />
-                  <span className="font-serif text-lg font-bold">Datos del Territorio</span>
+                <div className="flex items-center justify-between border-b border-emerald-800 pb-3">
+                  <div className="flex items-center gap-2.5">
+                    <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border border-amber-300/60 bg-[#FAF8F5] p-0.5">
+                      <Image
+                        src={siteConfig.logo.emblem}
+                        alt={siteConfig.logo.alt}
+                        width={32}
+                        height={32}
+                        className="h-full w-full object-contain"
+                      />
+                    </div>
+                    <span className="font-serif text-lg font-bold">Datos del Territorio</span>
+                  </div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-300">Emblema Local</span>
                 </div>
                 <dl className="space-y-3 text-xs sm:text-sm">
                   <div>

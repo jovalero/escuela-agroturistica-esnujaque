@@ -2,9 +2,10 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
-import { ChevronDown, Download, Menu, Sprout, X } from 'lucide-react';
+import { ChevronDown, Download, Menu, X } from 'lucide-react';
 import { siteConfig } from '@/data/site';
 import { cn } from '@/lib/utils';
 
@@ -123,17 +124,21 @@ export function Header() {
         )}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2.5 sm:px-6 lg:px-8">
-          {/* Izquierda: Identidad del proyecto (entra en 1 o 2 líneas sin romperse) */}
+          {/* Izquierda: Identidad del proyecto (Logo oficial + nombre) */}
           <Link
             href="/"
-            className="group flex items-center gap-2.5 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
+            className="group flex items-center gap-3 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
           >
-            <span
-              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-emerald-500/40 bg-emerald-800/80 text-amber-300 transition-colors group-hover:bg-emerald-700"
-              aria-hidden="true"
-            >
-              <Sprout className="h-5 w-5" />
-            </span>
+            <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full border border-amber-300/60 bg-[#FAF8F5] p-0.5 shadow-xs transition-transform duration-200 group-hover:scale-105">
+              <Image
+                src={siteConfig.logo.emblem}
+                alt={siteConfig.logo.alt}
+                width={44}
+                height={44}
+                className="h-full w-full object-contain"
+                priority
+              />
+            </div>
             <div className="flex flex-col">
               <span className="font-serif text-sm sm:text-base font-bold leading-snug tracking-tight text-white whitespace-normal max-w-[210px] sm:max-w-none">
                 Escuela Técnica Agroturística
@@ -312,9 +317,15 @@ export function Header() {
               <div>
                 <div className="flex items-center justify-between border-b border-emerald-900/80 pb-4">
                   <div className="flex items-center gap-2.5">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-800 text-amber-300">
-                      <Sprout className="h-5 w-5" aria-hidden="true" />
-                    </span>
+                    <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full border border-amber-300/60 bg-[#FAF8F5] p-0.5 shadow-xs">
+                      <Image
+                        src={siteConfig.logo.emblem}
+                        alt={siteConfig.logo.alt}
+                        width={40}
+                        height={40}
+                        className="h-full w-full object-contain"
+                      />
+                    </div>
                     <div>
                       <p className="font-serif text-sm font-bold text-white">
                         Escuela Técnica Agroturística

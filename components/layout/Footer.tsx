@@ -2,7 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowUp, Download, Mail, MapPin, Sprout, User } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowUp, Download, Mail, MapPin, User } from 'lucide-react';
 import { siteConfig } from '@/data/site';
 import { NewsletterForm } from '@/components/forms/NewsletterForm';
 
@@ -39,11 +40,17 @@ export function Footer() {
           <div className="space-y-4">
             <Link
               href="/"
-              className="inline-flex items-center gap-2.5 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
+              className="inline-flex items-center gap-3 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-paramo-700 text-white border border-paramo-500">
-                <Sprout className="h-5 w-5" aria-hidden="true" />
-              </span>
+              <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full border border-amber-300/60 bg-[#FAF8F5] p-0.5 shadow-xs">
+                <Image
+                  src={siteConfig.logo.emblem}
+                  alt={siteConfig.logo.alt}
+                  width={44}
+                  height={44}
+                  className="h-full w-full object-contain"
+                />
+              </div>
               <div>
                 <span className="block font-serif text-base font-bold text-white leading-tight">
                   {siteConfig.name}

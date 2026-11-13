@@ -25,6 +25,11 @@ export interface CronogramaActivity {
 export const siteConfig = {
   name: 'Escuela Técnica Agroturística de La Mesa de Esnujaque',
   shortName: 'ETA La Mesa de Esnujaque',
+  logo: {
+    emblem: '/brand/logo-emblema.png',
+    full: '/brand/logo-completo.png',
+    alt: 'Emblema de La Mesa de Esnujaque',
+  },
   documentTitle:
     'Propuesta educativa para el reconocimiento, protección y aprovechamiento responsable del patrimonio territorial como base del desarrollo sostenible de la comunidad',
   author: {

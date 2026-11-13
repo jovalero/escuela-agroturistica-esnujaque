@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { AlertTriangle, BookOpen, CheckCircle2, Download, FileText } from 'lucide-react';
 import { siteConfig } from '@/data/site';
 import { Badge } from '@/components/ui/Badge';
@@ -40,12 +41,24 @@ export default function ResumenPage() {
 
       <Section variant="dark" className="py-12 sm:py-16">
         <Container size="narrow">
-          <div className="flex flex-wrap items-center gap-2 mb-4">
-            <Badge variant="warning">
-              <AlertTriangle className="h-3.5 w-3.5" aria-hidden="true" />
-              Pendiente de aprobación del autor
-            </Badge>
-            <Badge variant="paramo">Lectura de 1 página · 4 min</Badge>
+          <div className="flex items-center gap-3.5 mb-4">
+            <div className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-amber-300/60 bg-[#FAF8F5] p-0.5 shadow-sm">
+              <Image
+                src={siteConfig.logo.emblem}
+                alt={siteConfig.logo.alt}
+                width={56}
+                height={56}
+                className="h-full w-full object-contain"
+                priority
+              />
+            </div>
+            <div className="flex flex-wrap items-center gap-2">
+              <Badge variant="warning">
+                <AlertTriangle className="h-3.5 w-3.5" aria-hidden="true" />
+                Pendiente de aprobación del autor
+              </Badge>
+              <Badge variant="paramo">Lectura de 1 página · 4 min</Badge>
+            </div>
           </div>
 
           <h1 className="font-serif text-3xl sm:text-5xl font-bold text-white leading-tight">
