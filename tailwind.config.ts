@@ -50,7 +50,7 @@ const config: Config = {
           900: '#0d2633',
         },
         papel: {
-          DEFAULT: '#FAF8F5',
+          DEFAULT: '#FFFFFF',
           dark: '#0E1713',
           card: '#FFFFFF',
           cardDark: '#15221C',

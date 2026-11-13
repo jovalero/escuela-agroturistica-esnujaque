@@ -13,11 +13,10 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
 
   useEffect(() => {
     const saved = localStorage.getItem('eta-theme');
-    const prefersDark =
-      saved === 'dark' ||
-      (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    setIsDark(prefersDark);
-    document.documentElement.classList.toggle('dark', prefersDark);
+    // Por defecto modo claro con fondo blanco para máxima legibilidad, salvo que el usuario elija oscuro
+    const isDarkMode = saved === 'dark';
+    setIsDark(isDarkMode);
+    document.documentElement.classList.toggle('dark', isDarkMode);
   }, []);
 
   const toggleTheme = () => {

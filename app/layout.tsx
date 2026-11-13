@@ -94,7 +94,7 @@ export default function RootLayout({
       className={`${lora.variable} ${plusJakarta.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col font-sans bg-papel dark:bg-papel-dark text-stone-900 dark:text-stone-100 antialiased">
+      <body className="min-h-screen flex flex-col font-sans bg-white dark:bg-papel-dark text-stone-900 dark:text-stone-100 antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(baseJsonLd) }}

@@ -37,47 +37,30 @@ export default function HomePage() {
   return (
     <>
       {/* 1. HERO */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-paramo-950 via-paramo-900 to-paramo-800 text-white pt-10 pb-16 sm:py-24">
-        {/* Textura topográfica andina sutil en SVG */}
-        <svg
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 h-full w-full opacity-10"
-          viewBox="0 0 1200 600"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,450 Q300,340 600,410 T1200,360 L1200,600 L0,600 Z"
-            fill="currentColor"
-          />
-          <path
-            d="M0,510 Q400,420 800,480 T1200,430 L1200,600 L0,600 Z"
-            fill="currentColor"
-          />
-        </svg>
-
+      <section className="relative overflow-hidden bg-gradient-to-b from-stone-50 via-white to-stone-100/50 text-stone-900 pt-10 pb-16 sm:py-24 border-b border-stone-200/80">
         <Container className="relative z-10">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-amber-400/20 px-4 py-1.5 text-xs sm:text-sm font-bold text-amber-200">
-                  <span className="h-2 w-2 rounded-full bg-amber-300 animate-pulse" aria-hidden="true" />
+                <span className="inline-flex items-center gap-2 rounded-full border border-paramo-200 bg-paramo-50 px-4 py-1.5 text-xs sm:text-sm font-bold text-paramo-800 shadow-2xs">
+                  <span className="h-2 w-2 rounded-full bg-paramo-600 animate-pulse" aria-hidden="true" />
                   {siteConfig.statusBadge}
                 </span>
-                <span className="inline-flex items-center gap-1 text-xs font-medium text-paramo-100">
-                  <MapPin className="h-3.5 w-3.5 text-amber-300" aria-hidden="true" />
+                <span className="inline-flex items-center gap-1 text-xs font-semibold text-stone-600">
+                  <MapPin className="h-3.5 w-3.5 text-paramo-700" aria-hidden="true" />
                   La Mesa de Esnujaque · Municipio Urdaneta, Estado Trujillo
                 </span>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-[3.25rem] font-bold leading-[1.15] tracking-tight text-white">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-[3.25rem] font-bold leading-[1.15] tracking-tight text-stone-950">
                 {siteConfig.name}
               </h1>
 
-              <p className="font-serif text-lg sm:text-xl text-paramo-100 leading-relaxed">
+              <p className="font-serif text-lg sm:text-xl text-paramo-800 font-semibold leading-relaxed">
                 {siteConfig.documentTitle}.
               </p>
 
-              <p className="text-sm sm:text-base text-paramo-100/90 leading-relaxed max-w-2xl">
+              <p className="text-sm sm:text-base text-stone-700 leading-relaxed max-w-2xl">
                 Una propuesta educativa inicial para integrar progresivamente la formación técnica con la agricultura sostenible, el turismo rural, la conservación ambiental y la participación comunitaria como fundamentos del bienestar colectivo.
               </p>
 
@@ -85,7 +68,7 @@ export default function HomePage() {
                 <Button
                   href="/documento"
                   size="lg"
-                  className="bg-amber-400 text-stone-950 hover:bg-amber-300 font-bold"
+                  className="bg-paramo-700 text-white hover:bg-paramo-800 font-bold shadow-sm"
                 >
                   <BookOpen className="h-5 w-5" aria-hidden="true" />
                   <span>Leer el anteproyecto</span>
@@ -94,24 +77,24 @@ export default function HomePage() {
                   href="/participa"
                   size="lg"
                   variant="outline"
-                  className="border-white/70 text-white hover:bg-white/15 dark:border-white/70 dark:text-white"
+                  className="border-stone-300 bg-white text-stone-800 hover:bg-stone-50 hover:text-paramo-800 font-semibold shadow-2xs"
                 >
-                  <MessageSquareHeart className="h-5 w-5" aria-hidden="true" />
+                  <MessageSquareHeart className="h-5 w-5 text-paramo-700" aria-hidden="true" />
                   <span>Participá</span>
                 </Button>
               </div>
 
-              <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-paramo-200 border-t border-white/15">
+              <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-stone-600 border-t border-stone-200">
                 <span>
-                  <strong className="text-white">Autor:</strong> {siteConfig.author.name}
+                  <strong className="text-stone-900">Autor:</strong> {siteConfig.author.name}
                 </span>
                 <span>
-                  <strong className="text-white">Estructura:</strong> 21 capítulos íntegros
+                  <strong className="text-stone-900">Estructura:</strong> 21 capítulos íntegros
                 </span>
                 <a
                   href={siteConfig.pdfUrl}
                   download="Anteproyecto-Escuela-Tecnica-Agroturistica-La-Mesa-de-Esnujaque.pdf"
-                  className="inline-flex items-center gap-1 font-semibold text-amber-300 underline hover:text-amber-200"
+                  className="inline-flex items-center gap-1 font-semibold text-paramo-700 underline hover:text-paramo-900"
                 >
                   <Download className="h-3.5 w-3.5" aria-hidden="true" />
                   Descargar PDF completo
@@ -128,7 +111,7 @@ export default function HomePage() {
                 aspectRatio="landscape"
                 priority
                 sizes="(max-width: 1024px) 100vw, 42vw"
-                className="border-white/20 shadow-2xl"
+                className="border-stone-200/90 shadow-xl"
               />
             </div>
           </div>
