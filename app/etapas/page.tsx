@@ -126,11 +126,11 @@ export default function EtapasPage() {
       <Section variant="muted">
         <Container>
           <div className="max-w-3xl mb-10">
-            <Badge variant="tierra">Capítulo 14 · Alternativas para la Ejecución</Badge>
-            <h2 className="mt-3 font-serif text-3xl font-bold text-stone-900 dark:text-stone-100">
+            <Badge variant="warning">Capítulo 14 · Alternativas para la Ejecución</Badge>
+            <h2 className="mt-3 font-serif text-3xl font-bold text-white">
               Cinco alternativas de ejecución no excluyentes
             </h2>
-            <p className="mt-2 text-base text-stone-700 dark:text-stone-300 leading-relaxed">
+            <p className="mt-2 text-base text-paramo-100 leading-relaxed">
               El anteproyecto analiza cinco modalidades que la comunidad organizada y las instituciones competentes pueden evaluar, combinar o desarrollar sucesivamente:
             </p>
           </div>

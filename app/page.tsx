@@ -160,42 +160,42 @@ export default function HomePage() {
         <Container>
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             <div className="lg:col-span-6 space-y-5">
-              <Badge variant="tierra">Patrimonio Territorial</Badge>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-black">
+              <Badge variant="warning">Patrimonio Territorial</Badge>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
                 Por qué La Mesa de Esnujaque
               </h2>
-              <p className="text-base leading-relaxed text-black font-normal">
+              <p className="text-base leading-relaxed text-paramo-100 font-normal">
                 Ubicada en la región andina del municipio Urdaneta del estado Trujillo, La Mesa de Esnujaque posee un valioso patrimonio territorial conformado por paisajes de montaña, fuentes hídricas, tradición agrícola e hitos naturales y culturales de alto valor para la comunidad.
               </p>
-              <p className="text-base leading-relaxed text-black font-normal">
-                Atractivos como el <strong className="text-black font-bold">Santuario de Durí</strong>, la{' '}
-                <strong className="text-black font-bold">Laguna de la Estrella</strong> y la{' '}
-                <strong className="text-black font-bold">Laguna de Pozo Negro</strong>, junto con la experiencia histórica de sus productores agrícolas, ofrecen una base extraordinaria para impulsar procesos educativos, productivos y turísticos compatibles con la protección de los ecosistemas.
+              <p className="text-base leading-relaxed text-paramo-100 font-normal">
+                Atractivos como el <strong className="text-white font-bold">Santuario de Durí</strong>, la{' '}
+                <strong className="text-white font-bold">Laguna de la Estrella</strong> y la{' '}
+                <strong className="text-white font-bold">Laguna de Pozo Negro</strong>, junto con la experiencia histórica de sus productores agrícolas, ofrecen una base extraordinaria para impulsar procesos educativos, productivos y turísticos compatibles con la protección de los ecosistemas.
               </p>
 
-              <ul className="space-y-2.5 text-sm text-black pt-1">
+              <ul className="space-y-2.5 text-sm text-paramo-100 pt-1">
                 <li className="flex items-start gap-2.5">
-                  <CheckCircle2 className="h-5 w-5 text-amber-800 shrink-0 mt-0.5" aria-hidden="true" />
-                  <span className="text-black">
-                    <strong className="text-black font-bold">Santuario de Durí:</strong> Referente arquitectónico, histórico y cultural del territorio.
+                  <CheckCircle2 className="h-5 w-5 text-amber-300 shrink-0 mt-0.5" aria-hidden="true" />
+                  <span>
+                    <strong className="text-white font-bold">Santuario de Durí:</strong> Referente arquitectónico, histórico y cultural del territorio.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <CheckCircle2 className="h-5 w-5 text-amber-800 shrink-0 mt-0.5" aria-hidden="true" />
-                  <span className="text-black">
-                    <strong className="text-black font-bold">Laguna de la Estrella y Laguna de Pozo Negro:</strong> Ecosistemas altoandinos y fuentes hídricas que requieren educación ambiental y resguardo.
+                  <CheckCircle2 className="h-5 w-5 text-amber-300 shrink-0 mt-0.5" aria-hidden="true" />
+                  <span>
+                    <strong className="text-white font-bold">Laguna de la Estrella y Laguna de Pozo Negro:</strong> Ecosistemas altoandinos y fuentes hídricas que requieren educación ambiental y resguardo.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <CheckCircle2 className="h-5 w-5 text-amber-800 shrink-0 mt-0.5" aria-hidden="true" />
-                  <span className="text-black">
-                    <strong className="text-black font-bold">Vocación agrícola andina:</strong> Identidad productiva vinculada al manejo responsable del suelo y del agua.
+                  <CheckCircle2 className="h-5 w-5 text-amber-300 shrink-0 mt-0.5" aria-hidden="true" />
+                  <span>
+                    <strong className="text-white font-bold">Vocación agrícola andina:</strong> Identidad productiva vinculada al manejo responsable del suelo y del agua.
                   </span>
                 </li>
               </ul>
 
               <div className="pt-3">
-                <Button href="/territorio" variant="primary" className="bg-amber-500 hover:bg-amber-600 text-stone-950 font-bold border border-amber-600 shadow-sm">
+                <Button href="/territorio" variant="primary" className="bg-amber-400 hover:bg-amber-300 text-stone-950 font-bold border-0 shadow-md">
                   <span>Explorar patrimonio, galería y mapa</span>
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Button>
@@ -278,11 +278,11 @@ export default function HomePage() {
       <Section id="impactos-esperados" variant="accent">
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-12">
-            <Badge variant="tierra">Capítulo 7 del Anteproyecto</Badge>
-            <h2 className="mt-3 font-serif text-3xl sm:text-4xl font-bold text-black">
+            <Badge variant="warning">Capítulo 7 del Anteproyecto</Badge>
+            <h2 className="mt-3 font-serif text-3xl sm:text-4xl font-bold text-white">
               Impactos esperados en la comunidad
             </h2>
-            <p className="mt-3 text-base text-black font-normal leading-relaxed">
+            <p className="mt-3 text-base text-paramo-100 font-normal leading-relaxed">
               Resultados previstos a mediano y largo plazo en la medida en que la propuesta sea evaluada, validada y desarrollada por etapas.
             </p>
           </div>
@@ -373,11 +373,11 @@ export default function HomePage() {
       <Section id="agenda-2030" variant="muted">
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-10">
-            <Badge variant="tierra">Marco Internacional · ONU (2015)</Badge>
-            <h2 className="mt-3 font-serif text-3xl sm:text-4xl font-bold text-black">
+            <Badge variant="warning">Marco Internacional · ONU (2015)</Badge>
+            <h2 className="mt-3 font-serif text-3xl sm:text-4xl font-bold text-white">
               Alineación con la Agenda 2030
             </h2>
-            <p className="mt-3 text-base text-black font-normal leading-relaxed">
+            <p className="mt-3 text-base text-paramo-100 font-normal leading-relaxed">
               Conforme al Capítulo 10 (Marco Legal), el anteproyecto se articula directamente con cinco Objetivos de Desarrollo Sostenible de las Naciones Unidas:
             </p>
           </div>

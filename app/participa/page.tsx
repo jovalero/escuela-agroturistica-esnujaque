@@ -114,14 +114,14 @@ export default function ParticipaPage() {
       <Section id="buzon-aportes" variant="muted">
         <Container size="narrow">
           <div className="mb-8">
-            <Badge variant="tierra">
+            <Badge variant="warning">
               <MessageSquarePlus className="h-3.5 w-3.5" aria-hidden="true" />
               Buzón Abierto de Observaciones
             </Badge>
-            <h2 className="mt-3 font-serif text-3xl font-bold text-stone-900 dark:text-stone-100">
+            <h2 className="mt-3 font-serif text-3xl font-bold text-white">
               2. Buzón de Aportes y Sugerencias
             </h2>
-            <p className="mt-2 text-base text-stone-700 dark:text-stone-300 leading-relaxed">
+            <p className="mt-2 text-base text-paramo-100 leading-relaxed">
               ¿Tenés una propuesta específica sobre el currículo, el Laboratorio de Análisis de Suelos, la protección de las lagunas, el Santuario de Durí o la articulación interinstitucional? Dejala aquí para que sea incorporada al análisis del anteproyecto.
             </p>
           </div>

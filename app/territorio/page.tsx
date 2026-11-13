@@ -127,14 +127,14 @@ export default function TerritorioPage() {
       <Section id="mapa-territorial" variant="muted">
         <Container>
           <div className="max-w-3xl mb-8">
-            <Badge variant="laguna">
+            <Badge variant="warning">
               <Mountain className="h-3.5 w-3.5" aria-hidden="true" />
               Cartografía Comunitaria · OpenStreetMap
             </Badge>
-            <h2 className="mt-3 font-serif text-3xl font-bold text-stone-900 dark:text-stone-100">
+            <h2 className="mt-3 font-serif text-3xl font-bold text-white">
               Mapa territorial de referencia
             </h2>
-            <p className="mt-2 text-sm sm:text-base text-stone-700 dark:text-stone-300 leading-relaxed">
+            <p className="mt-2 text-sm sm:text-base text-paramo-100 leading-relaxed">
               Explorá la ubicación referencial de La Mesa de Esnujaque, sus atractivos naturales y culturales y los espacios mencionados en el anteproyecto.
             </p>
           </div>

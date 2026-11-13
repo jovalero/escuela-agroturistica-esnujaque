@@ -14,10 +14,10 @@ export function Section({
   const variantStyles = {
     default: 'bg-white text-stone-950',
     muted:
-      'bg-amber-50/50 text-stone-950 border-y border-amber-200/80',
-    dark: 'bg-stone-950 text-white',
+      'bg-gradient-to-br from-paramo-950 via-paramo-900 to-paramo-800 text-white border-y border-paramo-700/80',
+    dark: 'bg-paramo-950 text-white border-y border-paramo-800',
     accent:
-      'bg-orange-50/50 text-stone-950 border-y border-amber-200/80',
+      'bg-gradient-to-br from-paramo-950 via-paramo-900 to-paramo-800 text-white border-y border-paramo-700/80',
   };
 
   return (
