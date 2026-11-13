@@ -11,21 +11,10 @@ import { ThemeToggle } from './ThemeToggle';
 
 export function Header() {
   const pathname = usePathname();
-  const isHome = pathname === '/';
-  const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const shouldReduceMotion = useReducedMotion();
   const drawerRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 24);
-    };
-    handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Close mobile drawer when route changes
   useEffect(() => {
@@ -77,8 +66,6 @@ export function Header() {
       document.body.style.overflow = originalOverflow;
     };
   }, [mobileMenuOpen]);
-
-  const isTransparentHero = isHome && !scrolled && !mobileMenuOpen;
 
   const isActiveLink = (href: string) => {
     if (href === '/') return pathname === '/';
