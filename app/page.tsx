@@ -121,9 +121,13 @@ export default function HomePage() {
 
             <div className="lg:col-span-5">
               <PhotoPlaceholder
-                label="[FOTO PENDIENTE: Panorámica de La Mesa de Esnujaque]"
-                alt="Paisaje andino, terrazas agrícolas y montañas de la comunidad La Mesa de Esnujaque, Municipio Urdaneta, Estado Trujillo"
-                caption="Patrimonio natural, agrícola y cultural de La Mesa de Esnujaque, Estado Trujillo."
+                src={siteConfig.heroPhoto.src}
+                label={siteConfig.heroPhoto.label}
+                alt={siteConfig.heroPhoto.alt}
+                caption={siteConfig.heroPhoto.caption}
+                aspectRatio="landscape"
+                priority
+                sizes="(max-width: 1024px) 100vw, 42vw"
                 className="border-white/20 shadow-2xl"
               />
             </div>

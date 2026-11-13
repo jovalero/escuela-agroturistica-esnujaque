@@ -74,6 +74,12 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://escuela-agroturistica-esnujaque.vercel.app',
   oldBlogUrl: 'https://escuela-agroturistica-trujillo.blogspot.com/',
   pdfUrl: '/documento-completo.pdf',
+  heroPhoto: {
+    src: '/galeria/panoramica-la-mesa.jpg',
+    label: '[FOTO PENDIENTE: Panorámica de La Mesa de Esnujaque]',
+    alt: 'Plaza, iglesia y montañas de la comunidad La Mesa de Esnujaque, Municipio Urdaneta, Estado Trujillo',
+    caption: 'Patrimonio natural, agrícola y cultural de La Mesa de Esnujaque, Estado Trujillo.',
+  },
 
   // Banner de anuncio opcional (activable para convocar asambleas comunitarias)
   announcementBanner: {
@@ -380,6 +386,7 @@ export const siteConfig = {
       lng: -70.7086,
       isApproximate: true,
       photoPlaceholder: '[FOTO PENDIENTE: Panorámica general de La Mesa de Esnujaque y sus montañas]',
+      imagePath: '/galeria/panoramica-la-mesa.jpg',
     },
     {
       id: 'santuario-duri',
@@ -453,13 +460,13 @@ export const siteConfig = {
   galleryItems: [
     {
       id: 'gal-1',
-      title: 'Paisaje montañoso de La Mesa de Esnujaque',
-      category: 'Paisajes y Lagunas',
-      alt: 'Vista panorámica del valle altoandino de La Mesa de Esnujaque en el municipio Urdaneta, estado Trujillo',
+      title: 'Centro poblado y entorno montañoso de La Mesa de Esnujaque',
+      category: 'Patrimonio Cultural',
+      alt: 'Plaza, iglesia y montañas de la comunidad La Mesa de Esnujaque en el municipio Urdaneta, estado Trujillo',
       placeholderLabel: '[FOTO PENDIENTE: Panorámica del valle y montañas de La Mesa de Esnujaque]',
       caption:
-        'Los paisajes de montaña y el clima andino conforman la base geográfica del patrimonio territorial de la comunidad.',
-      imageUrl: '',
+        'Arquitectura tradicional, vida comunitaria y paisajes de montaña que conforman el patrimonio territorial de La Mesa de Esnujaque.',
+      imageUrl: '/galeria/panoramica-la-mesa.jpg',
     },
     {
       id: 'gal-2',

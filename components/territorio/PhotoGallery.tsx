@@ -113,9 +113,11 @@ export function PhotoGallery() {
             />
             <div className="flex flex-wrap items-center justify-between gap-2">
               <Badge variant="paramo">{selectedItem.category}</Badge>
-              <span className="text-xs text-stone-500 dark:text-stone-400">
-                Ruta para subir foto real: <code>/public/galeria/</code>
-              </span>
+              {!selectedItem.imageUrl && (
+                <span className="text-xs text-stone-500 dark:text-stone-400">
+                  Ruta para subir foto real: <code>/public/galeria/</code>
+                </span>
+              )}
             </div>
             <p className="text-sm sm:text-base text-stone-700 dark:text-stone-300 leading-relaxed">
               {selectedItem.caption}

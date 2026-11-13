@@ -8,7 +8,9 @@ interface PhotoPlaceholderProps {
   alt: string;
   caption?: string;
   src?: string;
-  aspectRatio?: 'video' | 'square' | 'portrait';
+  aspectRatio?: 'video' | 'landscape' | 'square' | 'portrait';
+  priority?: boolean;
+  sizes?: string;
   className?: string;
 }
 
@@ -18,10 +20,13 @@ export function PhotoPlaceholder({
   caption,
   src,
   aspectRatio = 'video',
+  priority = false,
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
   className,
 }: PhotoPlaceholderProps) {
   const ratioClasses = {
     video: 'aspect-video',
+    landscape: 'aspect-[4/3]',
     square: 'aspect-square',
     portrait: 'aspect-[4/5]',
   };
@@ -39,8 +44,9 @@ export function PhotoPlaceholder({
             src={src}
             alt={alt}
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            priority={priority}
+            sizes={sizes}
+            className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
           <>
