@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#1B4332" stroke="#DDA15E" stroke-width="3" />
+  <path d="M12 46 L24 26 L34 38 L44 22 L52 46 Z" fill="#2D6A4F" opacity="0.65" />
+  <text x="32" y="40" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ETA</text>
+</svg>
