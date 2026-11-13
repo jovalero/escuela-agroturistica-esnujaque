@@ -83,7 +83,7 @@ export const siteConfig = {
 
   // Banner de anuncio opcional (activable para convocar asambleas comunitarias)
   announcementBanner: {
-    enabled: true,
+    enabled: false,
     badge: 'Convocatoria Comunitaria',
     text: 'Próxima asamblea de socialización y validación comunitaria: [COMPLETAR: FECHA, HORA Y LUGAR]',
     ctaLabel: 'Participar y dejar aportes',
