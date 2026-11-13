@@ -5,9 +5,17 @@
 @layer base {
   html {
     background-color: #ffffff;
-    color: #1c2420;
+    color: #000000;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    color: #0a0a0a;
+  }
+
+  p, li {
+    color: #111111;
   }
 
   html.dark {
