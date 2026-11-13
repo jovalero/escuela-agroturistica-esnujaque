@@ -563,7 +563,7 @@ export default function HomePage() {
             </span>
           </div>
           <Quote
-            variant="dark"
+            variant="white"
             quote="La propuesta de crear progresivamente una Escuela Técnica Agroturística representa una invitación a construir ese futuro desde la educación, el trabajo, la participación y el compromiso con el territorio. A partir de este momento, el camino dependerá de la voluntad de la comunidad organizada, del apoyo de las instituciones y del esfuerzo de cada ciudadano dispuesto a hacer realidad esta visión compartida. Porque el futuro no se espera; se construye. ¡Vamos pa'lante, porque pa'lante es pa' allá!"
             author={siteConfig.author.name}
             context="Capítulo 20 · Reflexión Final"
