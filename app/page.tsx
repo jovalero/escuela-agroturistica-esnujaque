@@ -14,7 +14,6 @@ import {
   Users,
 } from 'lucide-react';
 import { siteConfig } from '@/data/site';
-import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { PhotoPlaceholder } from '@/components/ui/PhotoPlaceholder';
@@ -31,15 +30,15 @@ const PILLAR_ICONS = {
 export default function HomePage() {
   return (
     <>
-      {/* 1. HERO (Verde oscuro andino, sobrio y conectado con la identidad local) */}
-      <section className="relative overflow-hidden bg-[#1B4332] text-white pt-8 pb-14 sm:py-20 border-b border-[#143326]">
+      {/* 1. HERO (Blanco hueso / claro, sobrio, humano y centrado en la comunidad) */}
+      <section className="relative overflow-hidden bg-[#FAF8F5] text-stone-900 pt-8 pb-14 sm:py-20 border-b border-stone-200/80">
         <Container className="relative z-10">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             {/* Texto principal del Hero */}
             <div className="lg:col-span-6 space-y-6">
               {/* Emblema oficial y etiqueta del anteproyecto */}
               <div className="flex items-center gap-3">
-                <div className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-amber-300/70 bg-[#FAF8F5] p-0.5 shadow-sm">
+                <div className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-emerald-800/20 bg-white p-0.5 shadow-sm">
                   <Image
                     src={siteConfig.logo.emblem}
                     alt={siteConfig.logo.alt}
@@ -50,19 +49,19 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="inline-flex">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-900/80 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-amber-300 shadow-xs">
-                    <span className="h-2 w-2 rounded-full bg-amber-400" aria-hidden="true" />
+                  <span className="inline-flex items-center gap-2 rounded-full border border-emerald-600/30 bg-emerald-50 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-emerald-950">
+                    <span className="h-2 w-2 rounded-full bg-emerald-600" aria-hidden="true" />
                     Anteproyecto 2026 · En consulta comunitaria
                   </span>
                 </div>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-[2.85rem] font-bold leading-tight tracking-tight text-white">
+              <h1 className="font-serif text-3xl sm:text-4xl lg:text-[2.85rem] font-bold leading-tight tracking-tight text-stone-900">
                 {siteConfig.name}
               </h1>
 
               {/* Un solo texto, corto, directo y natural */}
-              <p className="text-base sm:text-lg text-emerald-50 leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg text-stone-700 leading-relaxed max-w-xl">
                 Una escuela técnica para que los jóvenes de La Mesa de Esnujaque puedan formarse en agricultura, turismo y cuidado del ambiente sin tener que irse del pueblo. Es un anteproyecto y queremos construirlo con la comunidad.
               </p>
 
@@ -71,7 +70,7 @@ export default function HomePage() {
                 <Button
                   href="/documento"
                   size="lg"
-                  className="bg-amber-400 hover:bg-amber-300 text-stone-950 font-bold shadow-xs border border-amber-500"
+                  className="bg-emerald-800 hover:bg-emerald-900 text-white font-bold shadow-xs border border-emerald-900"
                 >
                   <BookOpen className="h-5 w-5" aria-hidden="true" />
                   <span>Leer el anteproyecto</span>
@@ -80,25 +79,25 @@ export default function HomePage() {
                   href="/participa"
                   size="lg"
                   variant="outline"
-                  className="border-white/70 bg-white/10 text-white hover:bg-white/20 font-bold shadow-xs"
+                  className="border-amber-500 bg-amber-400 text-stone-950 hover:bg-amber-300 font-bold shadow-xs"
                 >
-                  <HeartHandshake className="h-5 w-5 text-amber-300" aria-hidden="true" />
+                  <HeartHandshake className="h-5 w-5 text-stone-950" aria-hidden="true" />
                   <span>Participá</span>
                 </Button>
               </div>
 
               {/* Datos breves de contexto */}
-              <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-emerald-100 border-t border-emerald-800/80">
+              <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-stone-600 border-t border-stone-200">
                 <span>
-                  <strong className="text-white font-bold">Autor:</strong> {siteConfig.author.name}
+                  <strong className="text-stone-900 font-bold">Autor:</strong> {siteConfig.author.name}
                 </span>
                 <span>
-                  <strong className="text-white font-bold">Estructura:</strong> 21 capítulos íntegros
+                  <strong className="text-stone-900 font-bold">Estructura:</strong> 21 capítulos íntegros
                 </span>
                 <a
                   href={siteConfig.pdfUrl}
                   download="Anteproyecto-Escuela-Tecnica-Agroturistica-La-Mesa-de-Esnujaque.pdf"
-                  className="inline-flex items-center gap-1 font-semibold text-amber-300 underline hover:text-amber-200"
+                  className="inline-flex items-center gap-1 font-semibold text-emerald-800 underline hover:text-emerald-900"
                 >
                   <Download className="h-3.5 w-3.5" aria-hidden="true" />
                   Descargar PDF completo
@@ -116,49 +115,53 @@ export default function HomePage() {
                 aspectRatio="landscape"
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="border-emerald-700/60 shadow-2xl"
+                className="border-stone-300/80 shadow-2xl"
               />
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Franja destacada única de aviso legal comunitario (Verde oscuro) */}
-      <div className="border-b border-emerald-900/80 bg-[#143326] py-3 px-4 text-xs sm:text-sm text-emerald-100 print:hidden">
+      {/* Franja destacada única de aviso legal comunitario */}
+      <div className="border-b border-stone-200/80 bg-white py-3 px-4 text-xs sm:text-sm text-stone-700 print:hidden">
         <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
-          <p className="leading-relaxed text-emerald-100">
-            <strong className="text-amber-300 font-semibold">Aviso comunitario: </strong>
-            <span className="text-emerald-100">{siteConfig.legalDisclaimer}</span>
+          <p className="leading-relaxed text-stone-700">
+            <strong className="text-emerald-900 font-semibold">Aviso comunitario: </strong>
+            <span className="text-stone-700">{siteConfig.legalDisclaimer}</span>
           </p>
           <Link
             href="/documento"
-            className="text-xs font-bold text-amber-300 underline hover:text-amber-200 shrink-0"
+            className="text-xs font-bold text-emerald-800 underline hover:text-emerald-950 shrink-0"
           >
             Conocer antecedentes legales
           </Link>
         </div>
       </div>
 
-      {/* 2. ¿QUÉ PROPONEMOS? (Diseño a dos columnas con narrativa editorial) */}
-      <Section id="que-proponemos" variant="default" className="py-12 sm:py-16">
+      {/* 2. ¿QUÉ PROPONEMOS? (Verde oscuro andino con tarjetas en verde profundo) */}
+      <Section id="que-proponemos" variant="muted" className="py-12 sm:py-16">
         <Container>
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 items-start">
             {/* Columna izquierda: Narrativa sencilla y cercana */}
             <div className="lg:col-span-5 space-y-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-300">
                 Propósito del anteproyecto
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-stone-900">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
                 ¿Qué proponemos para La Mesa?
               </h2>
-              <p className="text-base leading-relaxed text-stone-700">
+              <p className="text-base leading-relaxed text-emerald-100">
                 Queremos estudiar junto a los vecinos la creación progresiva de una Escuela Técnica Agroturística aprovechando las instalaciones educativas que ya tiene el pueblo.
               </p>
-              <p className="text-base leading-relaxed text-stone-700">
+              <p className="text-base leading-relaxed text-emerald-100">
                 El objetivo es que nuestros muchachos aprendan oficios prácticos que sirvan aquí mismo: agricultura ecológica, cuidado del agua, posadas, turismo rural y transformación de lo que se cosecha en las parcelas.
               </p>
               <div className="pt-2">
-                <Button href="/etapas" variant="outline" className="border-stone-400 text-stone-900 hover:bg-stone-100 font-semibold">
+                <Button
+                  href="/etapas"
+                  variant="outline"
+                  className="border-white/70 bg-white/10 text-white hover:bg-white/20 font-bold shadow-xs"
+                >
                   <span>Conocé cómo se implementaría</span>
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Button>
@@ -173,15 +176,15 @@ export default function HomePage() {
                 return (
                   <div
                     key={pillar.title}
-                    className="rounded-xl border border-stone-200 bg-[#FAF8F5] p-5 transition-colors hover:border-emerald-600/50"
+                    className="rounded-xl border border-emerald-700/60 bg-[#143326] p-5 text-white shadow-xs transition-colors hover:border-amber-400/50"
                   >
                     <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-800 text-amber-300">
                       <IconComponent className="h-5 w-5" aria-hidden="true" />
                     </div>
-                    <h3 className="font-serif text-lg font-bold text-stone-900">
+                    <h3 className="font-serif text-lg font-bold text-white">
                       {pillar.title}
                     </h3>
-                    <p className="mt-2 text-xs sm:text-sm text-stone-700 leading-relaxed">
+                    <p className="mt-2 text-xs sm:text-sm text-emerald-100 leading-relaxed">
                       {pillar.description}
                     </p>
                   </div>
@@ -192,44 +195,44 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* 3. POR QUÉ LA MESA DE ESNUJAQUE (Territorio sin marcadores de fotos pendientes) */}
-      <Section id="por-que-esnujaque" variant="muted" className="py-12 sm:py-16">
+      {/* 3. POR QUÉ LA MESA DE ESNUJAQUE (Blanco) */}
+      <Section id="por-que-esnujaque" variant="default" className="py-12 sm:py-16">
         <Container>
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             <div className="lg:col-span-7 space-y-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-amber-300">
+              <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
                 El territorio como escuela viva
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-stone-900">
                 Por qué La Mesa de Esnujaque
               </h2>
-              <p className="text-base leading-relaxed text-emerald-100">
+              <p className="text-base leading-relaxed text-stone-700">
                 La Mesa tiene todo para una escuela técnica: tierra fértil, tradición agrícola familiar y un entorno andino único. Entre el Santuario de Durí, la Laguna de la Estrella y la Laguna de Pozo Negro, el pueblo reúne historia, agua y campo que los estudiantes pueden aprender a cuidar y trabajar.
               </p>
 
-              <div className="space-y-3 pt-1 text-sm text-emerald-50">
+              <div className="space-y-3 pt-1 text-sm text-stone-800">
                 <div className="flex items-start gap-3">
-                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber-400 text-stone-950 font-bold text-xs mt-0.5">
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-800 text-amber-300 font-bold text-xs mt-0.5">
                     ✓
                   </div>
                   <div>
-                    <strong className="text-white font-bold">Santuario de Durí:</strong> Referente histórico, arquitectónico y espiritual del pueblo.
+                    <strong className="text-stone-950 font-bold">Santuario de Durí:</strong> Referente histórico, arquitectónico y espiritual del pueblo.
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber-400 text-stone-950 font-bold text-xs mt-0.5">
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-800 text-amber-300 font-bold text-xs mt-0.5">
                     ✓
                   </div>
                   <div>
-                    <strong className="text-white font-bold">Laguna de la Estrella y Laguna de Pozo Negro:</strong> Reservorios naturales de agua en la alta montaña que requieren cuidado y estudio.
+                    <strong className="text-stone-950 font-bold">Laguna de la Estrella y Laguna de Pozo Negro:</strong> Reservorios naturales de agua en la alta montaña que requieren cuidado y estudio.
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber-400 text-stone-950 font-bold text-xs mt-0.5">
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-800 text-amber-300 font-bold text-xs mt-0.5">
                     ✓
                   </div>
                   <div>
-                    <strong className="text-white font-bold">Valles y familias agrícolas:</strong> Décadas de conocimiento en el cultivo de hortalizas y flores en terrazas andinas.
+                    <strong className="text-stone-950 font-bold">Valles y familias agrícolas:</strong> Décadas de conocimiento en el cultivo de hortalizas y flores en terrazas andinas.
                   </div>
                 </div>
               </div>
@@ -238,7 +241,7 @@ export default function HomePage() {
                 <Button
                   href="/territorio"
                   variant="primary"
-                  className="bg-amber-400 hover:bg-amber-300 text-stone-950 font-bold border-0 shadow-sm"
+                  className="bg-emerald-800 hover:bg-emerald-900 text-white font-bold border-0 shadow-sm"
                 >
                   <span>Explorar territorio, galería y mapa</span>
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -248,10 +251,10 @@ export default function HomePage() {
 
             {/* Ficha editorial territorial del pueblo con emblema */}
             <div className="lg:col-span-5">
-              <div className="rounded-2xl border border-emerald-700/60 bg-[#143326] p-6 text-white space-y-4 shadow-md">
-                <div className="flex items-center justify-between border-b border-emerald-800 pb-3">
+              <div className="rounded-2xl border border-stone-200 bg-[#FAF8F5] p-6 text-stone-900 space-y-4 shadow-sm">
+                <div className="flex items-center justify-between border-b border-stone-200 pb-3">
                   <div className="flex items-center gap-2.5">
-                    <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border border-amber-300/60 bg-[#FAF8F5] p-0.5">
+                    <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border border-emerald-800/30 bg-white p-0.5">
                       <Image
                         src={siteConfig.logo.emblem}
                         alt={siteConfig.logo.alt}
@@ -260,26 +263,26 @@ export default function HomePage() {
                         className="h-full w-full object-contain"
                       />
                     </div>
-                    <span className="font-serif text-lg font-bold">Datos del Territorio</span>
+                    <span className="font-serif text-lg font-bold text-stone-900">Datos del Territorio</span>
                   </div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-300">Emblema Local</span>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-800">Emblema Local</span>
                 </div>
                 <dl className="space-y-3 text-xs sm:text-sm">
                   <div>
-                    <dt className="text-emerald-200 font-medium">Ubicación</dt>
-                    <dd className="font-bold text-white">Municipio Urdaneta, Estado Trujillo, Venezuela</dd>
+                    <dt className="text-emerald-800 font-semibold">Ubicación</dt>
+                    <dd className="font-bold text-stone-950">Municipio Urdaneta, Estado Trujillo, Venezuela</dd>
                   </div>
                   <div>
-                    <dt className="text-emerald-200 font-medium">Altitud y Clima</dt>
-                    <dd className="font-bold text-white">Aproximadamente 1.750 msnm · Clima templado de montaña</dd>
+                    <dt className="text-emerald-800 font-semibold">Altitud y Clima</dt>
+                    <dd className="font-bold text-stone-950">Aproximadamente 1.750 msnm · Clima templado de montaña</dd>
                   </div>
                   <div>
-                    <dt className="text-emerald-200 font-medium">Vocación Principal</dt>
-                    <dd className="font-bold text-white">Agricultura familiar de altura, floricultura, turismo rural y protección de cuencas</dd>
+                    <dt className="text-emerald-800 font-semibold">Vocación Principal</dt>
+                    <dd className="font-bold text-stone-950">Agricultura familiar de altura, floricultura, turismo rural y protección de cuencas</dd>
                   </div>
                   <div>
-                    <dt className="text-emerald-200 font-medium">Enfoque Educativo</dt>
-                    <dd className="font-bold text-white">Articular la escuela técnica con la vida cotidiana y productiva del pueblo</dd>
+                    <dt className="text-emerald-800 font-semibold">Enfoque Educativo</dt>
+                    <dd className="font-bold text-stone-950">Articular la escuela técnica con la vida cotidiana y productiva del pueblo</dd>
                   </div>
                 </dl>
               </div>
@@ -288,22 +291,26 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* 4. HOJA DE RUTA (Línea de tiempo progresiva en vez de tarjetas idénticas) */}
-      <Section id="hoja-de-ruta" variant="default" className="py-12 sm:py-16">
+      {/* 4. HOJA DE RUTA (Verde oscuro andino) */}
+      <Section id="hoja-de-ruta" variant="muted" className="py-12 sm:py-16">
         <Container>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
             <div className="max-w-2xl">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-300">
                 Implementación gradual
               </span>
-              <h2 className="mt-2 font-serif text-3xl sm:text-4xl font-bold text-stone-900">
+              <h2 className="mt-2 font-serif text-3xl sm:text-4xl font-bold text-white">
                 Hoja de ruta por etapas
               </h2>
-              <p className="mt-2 text-base text-stone-700 leading-relaxed">
+              <p className="mt-2 text-base text-emerald-100 leading-relaxed">
                 Un camino prudente y por pasos, pensado para construirse junto a la comunidad y las instituciones competentes.
               </p>
             </div>
-            <Button href="/etapas" variant="outline" className="border-stone-400 text-stone-900 hover:bg-stone-100 font-semibold shrink-0">
+            <Button
+              href="/etapas"
+              variant="outline"
+              className="border-white/70 bg-white/10 text-white hover:bg-white/20 font-bold shadow-xs shrink-0"
+            >
               <span>Ver detalle completo</span>
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Button>
@@ -314,21 +321,21 @@ export default function HomePage() {
             {siteConfig.roadmapStages.map((stage, idx) => (
               <div
                 key={stage.stage}
-                className="flex flex-col sm:flex-row items-start gap-4 rounded-xl border border-stone-200 bg-[#FAF8F5] p-5 transition-colors hover:border-emerald-600/50"
+                className="flex flex-col sm:flex-row items-start gap-4 rounded-xl border border-emerald-700/60 bg-[#143326] p-5 text-white transition-colors hover:border-amber-400/50"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-800 text-white font-bold text-base">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-400 text-stone-950 font-bold text-base">
                   {idx + 1}
                 </div>
                 <div className="space-y-1">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
+                    <span className="text-xs font-bold uppercase tracking-wider text-amber-300">
                       {stage.stage}
                     </span>
                   </div>
-                  <h3 className="font-serif text-lg font-bold text-stone-900">
+                  <h3 className="font-serif text-lg font-bold text-white">
                     {stage.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-emerald-100 leading-relaxed">
                     {stage.description}
                   </p>
                 </div>
@@ -338,17 +345,17 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* 5. IMPACTOS ESPERADOS (4 impactos concisos, reducidos a una frase cada uno) */}
-      <Section id="impactos-esperados" variant="muted" className="py-12 sm:py-16">
+      {/* 5. IMPACTOS ESPERADOS (Blanco) */}
+      <Section id="impactos-esperados" variant="default" className="py-12 sm:py-16">
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-300">
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
               Bienestar para la gente
             </span>
-            <h2 className="mt-2 font-serif text-3xl sm:text-4xl font-bold text-white">
+            <h2 className="mt-2 font-serif text-3xl sm:text-4xl font-bold text-stone-900">
               Impactos esperados en la comunidad
             </h2>
-            <p className="mt-2 text-base text-emerald-100 leading-relaxed">
+            <p className="mt-2 text-base text-stone-700 leading-relaxed">
               Lo que el anteproyecto busca lograr para las familias, los jóvenes y los productores de La Mesa de Esnujaque:
             </p>
           </div>
@@ -357,15 +364,15 @@ export default function HomePage() {
             {siteConfig.impacts.map((impact) => (
               <div
                 key={impact.id}
-                className="rounded-xl border border-emerald-700/60 bg-[#143326] p-5 text-white"
+                className="rounded-xl border border-stone-200 bg-[#FAF8F5] p-5 text-stone-900 shadow-xs transition-colors hover:border-emerald-600/50"
               >
-                <span className="inline-block rounded-md bg-emerald-800/80 px-2.5 py-1 text-xs font-bold text-amber-300 mb-2">
+                <span className="inline-block rounded-md bg-emerald-100 px-2.5 py-1 text-xs font-bold text-emerald-900 mb-2">
                   {impact.badge}
                 </span>
-                <h3 className="font-serif text-lg font-bold text-white">
+                <h3 className="font-serif text-lg font-bold text-stone-900">
                   {impact.title}
                 </h3>
-                <p className="mt-2 text-sm text-emerald-100 leading-relaxed">
+                <p className="mt-2 text-sm text-stone-700 leading-relaxed">
                   {impact.summary}
                 </p>
               </div>
@@ -374,25 +381,33 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* 6. CÓMO SE CONSTRUYE CON LA COMUNIDAD */}
-      <Section id="metodologia-comunitaria" variant="default" className="py-12 sm:py-16">
+      {/* 6. CÓMO SE CONSTRUYE CON LA COMUNIDAD (Verde oscuro andino) */}
+      <Section id="metodologia-comunitaria" variant="muted" className="py-12 sm:py-16">
         <Container>
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 items-start">
             <div className="lg:col-span-5 space-y-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-300">
                 Metodología participativa
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-stone-900">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
                 Cómo se construye con la comunidad
               </h2>
-              <p className="text-base leading-relaxed text-stone-700">
+              <p className="text-base leading-relaxed text-emerald-100">
                 Este proyecto no se impone desde una oficina: se conversa en la calle, en las asambleas y en las parcelas con quienes conocen la tierra y la vida del pueblo.
               </p>
               <div className="pt-2 flex flex-wrap gap-3">
-                <Button href="/cronograma" variant="outline" className="border-stone-400 text-stone-900 hover:bg-stone-100 font-semibold">
+                <Button
+                  href="/cronograma"
+                  variant="outline"
+                  className="border-white/70 bg-white/10 text-white hover:bg-white/20 font-bold shadow-xs"
+                >
                   <span>Ver cronograma de trabajo</span>
                 </Button>
-                <Button href="/documento/metodologia" variant="secondary" className="bg-emerald-50 text-emerald-950 border border-emerald-300 font-semibold">
+                <Button
+                  href="/documento/metodologia"
+                  variant="secondary"
+                  className="bg-amber-400 text-stone-950 hover:bg-amber-300 border-0 font-bold shadow-xs"
+                >
                   <span>Ver metodología detallada</span>
                 </Button>
               </div>
@@ -400,15 +415,18 @@ export default function HomePage() {
 
             <div className="lg:col-span-7 space-y-3">
               {siteConfig.methodologyPhases.map((phase, idx) => (
-                <div key={phase.number} className="flex items-start gap-4 rounded-xl border border-stone-200 bg-[#FAF8F5] p-4">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-emerald-800 text-xs font-bold text-white">
+                <div
+                  key={phase.number}
+                  className="flex items-start gap-4 rounded-xl border border-emerald-700/60 bg-[#143326] p-4 text-white shadow-xs"
+                >
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-400 text-xs font-bold text-stone-950">
                     {idx + 1}
                   </div>
                   <div>
-                    <h3 className="font-serif text-base font-bold text-stone-900">
+                    <h3 className="font-serif text-base font-bold text-white">
                       {phase.title}
                     </h3>
-                    <p className="mt-1 text-xs sm:text-sm text-stone-700 leading-relaxed">
+                    <p className="mt-1 text-xs sm:text-sm text-emerald-100 leading-relaxed">
                       {phase.description}
                     </p>
                   </div>
@@ -419,17 +437,17 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* 7. ALINEACIÓN CON LA AGENDA 2030 (Lista compacta y sobria) */}
-      <Section id="agenda-2030" variant="muted" className="py-12 sm:py-14">
+      {/* 7. ALINEACIÓN CON LA AGENDA 2030 (Blanco) */}
+      <Section id="agenda-2030" variant="default" className="py-12 sm:py-14">
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-8">
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-300">
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
               Marco internacional
             </span>
-            <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-white">
+            <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-stone-900">
               Alineación con los Objetivos de Desarrollo Sostenible
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-emerald-100">
+            <p className="mt-2 text-xs sm:text-sm text-stone-700">
               El anteproyecto vincula sus metas con cinco objetivos globales de la ONU:
             </p>
           </div>
@@ -439,7 +457,7 @@ export default function HomePage() {
             {siteConfig.sdgs.map((sdg) => (
               <div
                 key={sdg.number}
-                className="rounded-xl border border-emerald-700/60 bg-[#143326] p-4 text-white"
+                className="rounded-xl border border-stone-200 bg-[#FAF8F5] p-4 text-stone-900 shadow-xs transition-colors hover:border-emerald-600/50"
               >
                 <span
                   className="inline-block rounded px-2 py-0.5 text-[11px] font-extrabold text-white mb-2"
@@ -447,10 +465,10 @@ export default function HomePage() {
                 >
                   {sdg.number}
                 </span>
-                <h3 className="font-serif text-sm font-bold text-white">
+                <h3 className="font-serif text-sm font-bold text-stone-900">
                   {sdg.title}
                 </h3>
-                <p className="mt-1.5 text-xs text-emerald-100 leading-relaxed">
+                <p className="mt-1.5 text-xs text-stone-700 leading-relaxed">
                   {sdg.description}
                 </p>
               </div>
@@ -459,17 +477,17 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* 8. POSIBLES ALIADOS E INSTITUCIONES (Lista compacta y categorizada) */}
-      <Section id="posibles-aliados" variant="default" className="py-12 sm:py-16">
+      {/* 8. POSIBLES ALIADOS E INSTITUCIONES (Verde oscuro andino) */}
+      <Section id="posibles-aliados" variant="muted" className="py-12 sm:py-16">
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-8">
-            <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-300">
               Articulación comunitaria e institucional
             </span>
-            <h2 className="mt-2 font-serif text-3xl font-bold text-stone-900">
+            <h2 className="mt-2 font-serif text-3xl font-bold text-white">
               Actores clave y posibles aliados
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-stone-700 leading-relaxed">
+            <p className="mt-2 text-xs sm:text-sm text-emerald-100 leading-relaxed">
               Instancias identificadas para coordinar esfuerzos una vez que la propuesta sea validada por la comunidad:
             </p>
           </div>
@@ -478,15 +496,15 @@ export default function HomePage() {
             {siteConfig.allies.map((ally) => (
               <div
                 key={ally.name}
-                className="rounded-xl border border-stone-200 bg-[#FAF8F5] p-4 space-y-1.5"
+                className="rounded-xl border border-emerald-700/60 bg-[#143326] p-4 text-white space-y-1.5 shadow-xs"
               >
-                <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-800">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-amber-300">
                   {ally.category}
                 </span>
-                <h3 className="font-serif text-base font-bold text-stone-900">
+                <h3 className="font-serif text-base font-bold text-white">
                   {ally.name}
                 </h3>
-                <p className="text-xs text-stone-700 leading-relaxed">
+                <p className="text-xs text-emerald-100 leading-relaxed">
                   {ally.role}
                 </p>
               </div>
@@ -495,10 +513,10 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* 9. PARTICIPÁ (Llamado a la acción con voseo cálido y consistente) */}
-      <Section id="participa-cta" variant="dark" className="py-12 sm:py-16">
+      {/* 9. PARTICIPÁ (Blanco con tarjeta destacada de convocatoria) */}
+      <Section id="participa-cta" variant="default" className="py-12 sm:py-16">
         <Container>
-          <div className="rounded-2xl border border-emerald-700 bg-[#143326] p-8 sm:p-10 shadow-lg">
+          <div className="rounded-2xl border border-emerald-700/70 bg-[#143326] p-8 sm:p-10 shadow-lg text-white">
             <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
               <div className="lg:col-span-8 space-y-3">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-400/20 border border-amber-300/40 px-3 py-1 text-xs font-bold text-amber-300">
@@ -535,16 +553,17 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* 10. REFLEXIÓN FINAL */}
-      <Section id="reflexion-cierre" variant="default" className="py-12 sm:py-14">
+      {/* 10. REFLEXIÓN FINAL (Verde oscuro andino) */}
+      <Section id="reflexion-cierre" variant="muted" className="py-12 sm:py-14">
         <Container size="narrow">
           <div className="text-center mb-5">
-            <Badge variant="paramo">
-              <Leaf className="h-3.5 w-3.5" aria-hidden="true" />
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-900/80 border border-emerald-500/40 px-3.5 py-1 text-xs font-semibold text-amber-300">
+              <Leaf className="h-3.5 w-3.5 text-amber-400" aria-hidden="true" />
               Reflexión Final del Documento
-            </Badge>
+            </span>
           </div>
           <Quote
+            variant="dark"
             quote="La propuesta de crear progresivamente una Escuela Técnica Agroturística representa una invitación a construir ese futuro desde la educación, el trabajo, la participación y el compromiso con el territorio. A partir de este momento, el camino dependerá de la voluntad de la comunidad organizada, del apoyo de las instituciones y del esfuerzo de cada ciudadano dispuesto a hacer realidad esta visión compartida. Porque el futuro no se espera; se construye. ¡Vamos pa'lante, porque pa'lante es pa' allá!"
             author={siteConfig.author.name}
             context="Capítulo 20 · Reflexión Final"
